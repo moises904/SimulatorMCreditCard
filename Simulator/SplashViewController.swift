@@ -39,9 +39,7 @@ class SplashViewController: UIViewController {
 
         let story = UIStoryboard(name: "Main", bundle: nil)
         let homeViewController = story.instantiateViewController( identifier: "IdHomeViewController")
-        let splashViewController = story.instantiateViewController(identifier: "IdSplashViewController")
         self.navigationController?.popToViewController(self , animated: true)
-
         self.navigationController?.pushViewController(homeViewController, animated: true)
     }
 

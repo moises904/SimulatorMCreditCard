@@ -19,6 +19,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var paymentDayDropDown: DropDown!
     @IBOutlet weak var calculateButton: UIButton!
     
+    @IBAction func clickCalculate(_ sender: UIButton) {
+        goToResultSimulate()
+    }
+    
     let maxCharacterDocumentNumber = 8
     
     override func viewDidLoad() {
@@ -53,4 +57,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         return newString.length <= maxCharacterDocumentNumber
     }
 
+    func goToResultSimulate() {
+        
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let resultViewController = story.instantiateViewController( identifier: "IdResultViewController")
+        self.navigationController?.popToViewController(self , animated: true)
+        self.navigationController?.pushViewController(resultViewController, animated: true)
+    }
 }
