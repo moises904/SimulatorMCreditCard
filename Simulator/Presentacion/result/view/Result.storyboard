@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Result View Controller-->
+        <scene sceneID="aUr-DV-WA3">
+            <objects>
+                <viewController storyboardIdentifier="IdResultViewController" id="bQb-4v-HMn" customClass="ResultViewController" customModule="Simulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SBV-eJ-xeq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-45-vq5">
+                                <rect key="frame" x="114" y="567" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ESL-rs-l5I"/>
+                                </constraints>
+                                <state key="normal" title="Volver"/>
+                                <connections>
+                                    <action selector="clickReturSimulate:" destination="bQb-4v-HMn" eventType="touchUpInside" id="hGm-54-BYk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu cuota mensual estimada es" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofO-sl-G1Q">
+                                <rect key="frame" x="97" y="164" width="234" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="krf-GF-hP1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eiY-45-vq5" firstAttribute="leading" secondItem="krf-GF-hP1" secondAttribute="leading" constant="114" id="2J0-BF-HZa"/>
+                            <constraint firstItem="ofO-sl-G1Q" firstAttribute="top" secondItem="krf-GF-hP1" secondAttribute="top" constant="120" id="2M7-ft-6WO"/>
+                            <constraint firstItem="eiY-45-vq5" firstAttribute="centerX" secondItem="SBV-eJ-xeq" secondAttribute="centerX" id="DgM-ld-2eq"/>
+                            <constraint firstItem="krf-GF-hP1" firstAttribute="bottom" secondItem="eiY-45-vq5" secondAttribute="bottom" constant="265" id="NUn-0M-JTl"/>
+                            <constraint firstItem="eiY-45-vq5" firstAttribute="centerX" secondItem="ofO-sl-G1Q" secondAttribute="centerX" id="QdP-Oo-g9S"/>
+                            <constraint firstItem="ofO-sl-G1Q" firstAttribute="centerX" secondItem="SBV-eJ-xeq" secondAttribute="centerX" id="RGh-y4-TOm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5iH-q1-EEV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVK-TV-PA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4256" y="-460"/>
+        </scene>
+    </scenes>
+</document>

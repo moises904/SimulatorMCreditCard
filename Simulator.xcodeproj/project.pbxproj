@@ -13,7 +13,7 @@
 		B504FB42261065670020F07C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB41261065670020F07C /* AppDelegate.swift */; };
 		B504FB44261065670020F07C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB43261065670020F07C /* SceneDelegate.swift */; };
 		B504FB46261065670020F07C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB45261065670020F07C /* SplashViewController.swift */; };
-		B504FB49261065670020F07C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B504FB47261065670020F07C /* Main.storyboard */; };
+		B504FB49261065670020F07C /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B504FB47261065670020F07C /* Splash.storyboard */; };
 		B504FB4B261065680020F07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B504FB4A261065680020F07C /* Assets.xcassets */; };
 		B504FB4E261065680020F07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B504FB4C261065680020F07C /* LaunchScreen.storyboard */; };
 		B504FB59261065680020F07C /* SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB58261065680020F07C /* SimulatorTests.swift */; };
@@ -21,7 +21,9 @@
 		B524B46A261D0E8E00B8DB01 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B524B469261D0E8E00B8DB01 /* iOSDropDown.framework */; };
 		B524B47D261EB5AC00B8DB01 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B524B47C261EB5AC00B8DB01 /* IQKeyboardManagerSwift.framework */; };
 		B524B48F261F96DD00B8DB01 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524B48E261F96DD00B8DB01 /* ResultViewController.swift */; };
-		B5FC65BE2616CA8A007AB4C6 /* simulator_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = B5FC65BD2616CA8A007AB4C6 /* simulator_splash.json */; };
+		B524B4A8261FE59A00B8DB01 /* simulator_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = B524B4A7261FE59A00B8DB01 /* simulator_splash.json */; };
+		B524B4B7261FF9A800B8DB01 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B524B4B6261FF9A800B8DB01 /* Home.storyboard */; };
+		B524B4C0261FFB8800B8DB01 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B524B4BF261FFB8800B8DB01 /* Result.storyboard */; };
 		B5FC662F26183873007AB4C6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B5FC662E26183873007AB4C6 /* Lottie */; settings = {ATTRIBUTES = (Required, ); }; };
 		B5FC6693261986E8007AB4C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC6692261986E8007AB4C6 /* HomeViewController.swift */; };
 		E550A3648FE4F08B176A44EE /* Pods_Simulator_SimulatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB25F87B79453B04FEFA762A /* Pods_Simulator_SimulatorUITests.framework */; };
@@ -69,7 +71,7 @@
 		B504FB41261065670020F07C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B504FB43261065670020F07C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B504FB45261065670020F07C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		B504FB48261065670020F07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B504FB48261065670020F07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
 		B504FB4A261065680020F07C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B504FB4D261065680020F07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B504FB4F261065680020F07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,7 +86,9 @@
 		B524B469261D0E8E00B8DB01 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B524B47C261EB5AC00B8DB01 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B524B48E261F96DD00B8DB01 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		B5FC65BD2616CA8A007AB4C6 /* simulator_splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = simulator_splash.json; path = ../../../simulator_splash.json; sourceTree = "<group>"; };
+		B524B4A7261FE59A00B8DB01 /* simulator_splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = simulator_splash.json; path = Assets/simulator_splash.json; sourceTree = "<group>"; };
+		B524B4B6261FF9A800B8DB01 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		B524B4BF261FFB8800B8DB01 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		B5FC6692261986E8007AB4C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB8B8154762C2CFFC6E4AB04 /* Pods-SimulatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorTests.release.xcconfig"; path = "Target Support Files/Pods-SimulatorTests/Pods-SimulatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE71C709FDCE9FAD61D0AA2C /* Pods_SimulatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimulatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,16 +178,13 @@
 		B504FB40261065670020F07C /* Simulator */ = {
 			isa = PBXGroup;
 			children = (
-				B5FC65BD2616CA8A007AB4C6 /* simulator_splash.json */,
-				B504FB41261065670020F07C /* AppDelegate.swift */,
+				B524B4AD261FF85200B8DB01 /* Presentacion */,
+				B524B497261FD3D300B8DB01 /* Resources */,
+				B524B496261FD34200B8DB01 /* Supporting Files */,
+				B524B495261FD2E800B8DB01 /* Application */,
+				B524B492261FD20D00B8DB01 /* Domain */,
 				B504FB43261065670020F07C /* SceneDelegate.swift */,
-				B504FB45261065670020F07C /* SplashViewController.swift */,
-				B504FB47261065670020F07C /* Main.storyboard */,
-				B504FB4A261065680020F07C /* Assets.xcassets */,
 				B504FB4C261065680020F07C /* LaunchScreen.storyboard */,
-				B504FB4F261065680020F07C /* Info.plist */,
-				B5FC6692261986E8007AB4C6 /* HomeViewController.swift */,
-				B524B48E261F96DD00B8DB01 /* ResultViewController.swift */,
 			);
 			path = Simulator;
 			sourceTree = "<group>";
@@ -204,6 +205,140 @@
 				B504FB65261065680020F07C /* Info.plist */,
 			);
 			path = SimulatorUITests;
+			sourceTree = "<group>";
+		};
+		B524B492261FD20D00B8DB01 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B524B494261FD26100B8DB01 /* UseCase */,
+				B524B493261FD21A00B8DB01 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B524B493261FD21A00B8DB01 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B524B494261FD26100B8DB01 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B524B495261FD2E800B8DB01 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B504FB41261065670020F07C /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B524B496261FD34200B8DB01 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B504FB4F261065680020F07C /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		B524B497261FD3D300B8DB01 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B524B4A7261FE59A00B8DB01 /* simulator_splash.json */,
+				B504FB4A261065680020F07C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B524B4AD261FF85200B8DB01 /* Presentacion */ = {
+			isa = PBXGroup;
+			children = (
+				B524B4BC261FFAE500B8DB01 /* result */,
+				B524B4B1261FF8B000B8DB01 /* home */,
+				B524B4B0261FF88700B8DB01 /* splash */,
+			);
+			path = Presentacion;
+			sourceTree = "<group>";
+		};
+		B524B4AE261FF85E00B8DB01 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				B504FB47261065670020F07C /* Splash.storyboard */,
+				B504FB45261065670020F07C /* SplashViewController.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		B524B4AF261FF87700B8DB01 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		B524B4B0261FF88700B8DB01 /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				B524B4AE261FF85E00B8DB01 /* views */,
+				B524B4AF261FF87700B8DB01 /* viewmodel */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
+		B524B4B1261FF8B000B8DB01 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				B524B4B3261FF8BD00B8DB01 /* viewmodel */,
+				B524B4B2261FF8B700B8DB01 /* view */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		B524B4B2261FF8B700B8DB01 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B5FC6692261986E8007AB4C6 /* HomeViewController.swift */,
+				B524B4B6261FF9A800B8DB01 /* Home.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B524B4B3261FF8BD00B8DB01 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		B524B4BC261FFAE500B8DB01 /* result */ = {
+			isa = PBXGroup;
+			children = (
+				B524B4BE261FFB5B00B8DB01 /* viewmodel */,
+				B524B4BD261FFAF300B8DB01 /* view */,
+			);
+			path = result;
+			sourceTree = "<group>";
+		};
+		B524B4BD261FFAF300B8DB01 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B524B48E261F96DD00B8DB01 /* ResultViewController.swift */,
+				B524B4BF261FFB8800B8DB01 /* Result.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B524B4BE261FFB5B00B8DB01 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,9 +458,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B504FB4E261065680020F07C /* LaunchScreen.storyboard in Resources */,
+				B524B4C0261FFB8800B8DB01 /* Result.storyboard in Resources */,
+				B524B4B7261FF9A800B8DB01 /* Home.storyboard in Resources */,
 				B504FB4B261065680020F07C /* Assets.xcassets in Resources */,
-				B504FB49261065670020F07C /* Main.storyboard in Resources */,
-				B5FC65BE2616CA8A007AB4C6 /* simulator_splash.json in Resources */,
+				B504FB49261065670020F07C /* Splash.storyboard in Resources */,
+				B524B4A8261FE59A00B8DB01 /* simulator_splash.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,12 +633,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B504FB47261065670020F07C /* Main.storyboard */ = {
+		B504FB47261065670020F07C /* Splash.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B504FB48261065670020F07C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Splash.storyboard;
 			sourceTree = "<group>";
 		};
 		B504FB4C261065680020F07C /* LaunchScreen.storyboard */ = {
@@ -640,7 +777,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Simulator/Info.plist;
+				INFOPLIST_FILE = "Simulator/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -659,7 +796,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Simulator/Info.plist;
+				INFOPLIST_FILE = "Simulator/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

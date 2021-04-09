@@ -59,7 +59,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
 
     func goToResultSimulate() {
         
-        let story = UIStoryboard(name: "Main", bundle: nil)
+        let story = UIStoryboard(name: "Result", bundle: nil)
         let resultViewController = story.instantiateViewController( identifier: "IdResultViewController")
         self.navigationController?.popToViewController(self , animated: true)
         self.navigationController?.pushViewController(resultViewController, animated: true)

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="WX2-yN-mUe">
+            <objects>
+                <viewController storyboardIdentifier="IdHomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qpe-LT-MiL" customClass="HomeViewController" customModule="Simulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ngu-dv-BEa">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="500" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62v-ss-dgh">
+                                <rect key="frame" x="0.0" y="90" width="428" height="1000"/>
+                                <subviews>
+                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umP-YW-4NU">
+                                        <rect key="frame" x="0.0" y="50" width="428" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DNI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXs-aY-wGV">
+                                                <rect key="frame" x="24" y="10" width="380" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de Tarjeta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndT-Pq-0Iq">
+                                                <rect key="frame" x="24" y="112.5" width="380" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tipo de tarjeta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QW9-v5-3id" customClass="DropDown" customModule="iOSDropDown">
+                                                <rect key="frame" x="24" y="156.5" width="380" height="34"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            </textField>
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Monto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Bu-FD-AcN">
+                                                <rect key="frame" x="24" y="259.5" width="380" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuotas a financiar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nv8-mU-Cf9">
+                                                <rect key="frame" x="24" y="317.5" width="380" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasa de Interes Anual  TEA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrg-Qu-n0Y">
+                                                <rect key="frame" x="24" y="420.5" width="380" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tasa de interes anual" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gf6-UP-jag" customClass="DropDown" customModule="iOSDropDown">
+                                                <rect key="frame" x="24" y="465.5" width="380" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="handleKeyboard" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" text="Monto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2h-c8-PNf">
+                                                <rect key="frame" x="24" y="214.5" width="380" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1o-EO-vDK">
+                                                <rect key="frame" x="272" y="702.5" width="56" height="30"/>
+                                                <state key="normal" title="Calcular"/>
+                                                <connections>
+                                                    <action selector="clickCalculate:" destination="qpe-LT-MiL" eventType="touchUpInside" id="jqB-Gg-0vU"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Días de pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee6-ON-vWw">
+                                                <rect key="frame" x="24" y="523.5" width="380" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Numedo de documento" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-fG-fhe">
+                                                <rect key="frame" x="24" y="54.5" width="380" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <textField opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Numero de cuotas a financiar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkT-hN-1ny" customClass="DropDown" customModule="iOSDropDown">
+                                                <rect key="frame" x="24" y="362.5" width="380" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="handleKeyboard" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dia de pago" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-Br-il1" customClass="DropDown" customModule="iOSDropDown">
+                                                <rect key="frame" x="24" y="568.5" width="380" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="handleKeyboard" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bmS-Br-il1" secondAttribute="trailing" constant="24" id="0Lw-q1-xna"/>
+                                            <constraint firstItem="QW9-v5-3id" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="2cJ-dR-s7B"/>
+                                            <constraint firstAttribute="trailing" secondItem="T1o-EO-vDK" secondAttribute="trailing" constant="100" id="3Ls-aW-KUz"/>
+                                            <constraint firstAttribute="trailing" secondItem="ee6-ON-vWw" secondAttribute="trailing" constant="24" id="44t-XA-vyK"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Rd-fG-fhe" secondAttribute="trailing" constant="24" id="4pf-vP-a3b"/>
+                                            <constraint firstItem="gf6-UP-jag" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="5bB-Sb-MsK"/>
+                                            <constraint firstItem="bmS-Br-il1" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="90U-Fu-qm4"/>
+                                            <constraint firstItem="ndT-Pq-0Iq" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="9O1-Ky-G09"/>
+                                            <constraint firstItem="bmS-Br-il1" firstAttribute="top" secondItem="ee6-ON-vWw" secondAttribute="bottom" constant="24" id="AdO-hL-cHw"/>
+                                            <constraint firstItem="9Rd-fG-fhe" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="Agc-J6-PN4"/>
+                                            <constraint firstItem="ee6-ON-vWw" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="BD1-Jh-lE5"/>
+                                            <constraint firstAttribute="trailing" secondItem="ndT-Pq-0Iq" secondAttribute="trailing" constant="24" id="BtY-j9-n48"/>
+                                            <constraint firstItem="ee6-ON-vWw" firstAttribute="top" secondItem="gf6-UP-jag" secondAttribute="bottom" constant="24" id="C6C-lL-hdz"/>
+                                            <constraint firstAttribute="trailing" secondItem="VXs-aY-wGV" secondAttribute="trailing" constant="24" id="D2Z-zu-lkC"/>
+                                            <constraint firstItem="Rrg-Qu-n0Y" firstAttribute="top" secondItem="jkT-hN-1ny" secondAttribute="bottom" constant="24" id="FrS-Bv-ZAB"/>
+                                            <constraint firstItem="QW9-v5-3id" firstAttribute="top" secondItem="ndT-Pq-0Iq" secondAttribute="bottom" constant="24" id="GLQ-lC-E2r"/>
+                                            <constraint firstItem="ndT-Pq-0Iq" firstAttribute="top" secondItem="9Rd-fG-fhe" secondAttribute="bottom" constant="24" id="I97-Y4-BP0"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nv8-mU-Cf9" secondAttribute="trailing" constant="24" id="Ija-BJ-CGH"/>
+                                            <constraint firstItem="1Bu-FD-AcN" firstAttribute="top" secondItem="d2h-c8-PNf" secondAttribute="bottom" constant="24" id="Mlb-gt-cJz"/>
+                                            <constraint firstItem="jkT-hN-1ny" firstAttribute="top" secondItem="Nv8-mU-Cf9" secondAttribute="bottom" constant="24" id="No6-Ep-LAn"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rrg-Qu-n0Y" secondAttribute="trailing" constant="24" id="Q4s-bK-sPd"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Bu-FD-AcN" secondAttribute="trailing" constant="24" id="RC9-ud-jrN"/>
+                                            <constraint firstItem="Nv8-mU-Cf9" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="Rga-KI-oig"/>
+                                            <constraint firstItem="T1o-EO-vDK" firstAttribute="top" secondItem="bmS-Br-il1" secondAttribute="bottom" constant="100" id="T1w-y0-Qji"/>
+                                            <constraint firstAttribute="trailing" secondItem="d2h-c8-PNf" secondAttribute="trailing" constant="24" id="Tgl-rC-IUi"/>
+                                            <constraint firstItem="VXs-aY-wGV" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="UsK-6h-VsD"/>
+                                            <constraint firstAttribute="trailing" secondItem="jkT-hN-1ny" secondAttribute="trailing" constant="24" id="VMf-p8-9qV"/>
+                                            <constraint firstAttribute="trailing" secondItem="QW9-v5-3id" secondAttribute="trailing" constant="24" id="acf-we-g0s"/>
+                                            <constraint firstItem="gf6-UP-jag" firstAttribute="top" secondItem="Rrg-Qu-n0Y" secondAttribute="bottom" constant="24" id="ag1-mu-5vo"/>
+                                            <constraint firstItem="jkT-hN-1ny" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="byh-Zo-f1u"/>
+                                            <constraint firstItem="d2h-c8-PNf" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="dp4-4Z-rT4"/>
+                                            <constraint firstItem="Rrg-Qu-n0Y" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="eMN-kg-ibo"/>
+                                            <constraint firstItem="VXs-aY-wGV" firstAttribute="top" secondItem="umP-YW-4NU" secondAttribute="top" constant="10" id="eQ3-84-dmo"/>
+                                            <constraint firstItem="T1o-EO-vDK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="umP-YW-4NU" secondAttribute="leading" constant="20" symbolic="YES" id="ehH-XY-AZk"/>
+                                            <constraint firstItem="Nv8-mU-Cf9" firstAttribute="top" secondItem="1Bu-FD-AcN" secondAttribute="bottom" constant="24" id="fLh-ik-ztZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="gf6-UP-jag" secondAttribute="trailing" constant="24" id="gwk-6s-e25"/>
+                                            <constraint firstItem="d2h-c8-PNf" firstAttribute="top" secondItem="QW9-v5-3id" secondAttribute="bottom" constant="24" id="huS-6D-xiu"/>
+                                            <constraint firstItem="9Rd-fG-fhe" firstAttribute="top" secondItem="VXs-aY-wGV" secondAttribute="bottom" constant="24" id="lzo-nD-Ez6"/>
+                                            <constraint firstItem="1Bu-FD-AcN" firstAttribute="leading" secondItem="umP-YW-4NU" secondAttribute="leading" constant="24" id="sS8-bs-OwD"/>
+                                        </constraints>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                    </view>
+                                </subviews>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="umP-YW-4NU" secondAttribute="bottom" constant="50" id="1Y1-ds-NBr"/>
+                                    <constraint firstItem="umP-YW-4NU" firstAttribute="height" secondItem="62v-ss-dgh" secondAttribute="height" priority="250" constant="274" id="4Wc-BR-pr7"/>
+                                    <constraint firstItem="umP-YW-4NU" firstAttribute="leading" secondItem="62v-ss-dgh" secondAttribute="leading" id="OVJ-o4-4bj"/>
+                                    <constraint firstItem="umP-YW-4NU" firstAttribute="width" secondItem="62v-ss-dgh" secondAttribute="width" id="Qhu-xB-dUs"/>
+                                    <constraint firstAttribute="trailing" secondItem="umP-YW-4NU" secondAttribute="trailing" id="dZa-Dn-Jem"/>
+                                    <constraint firstItem="umP-YW-4NU" firstAttribute="top" secondItem="62v-ss-dgh" secondAttribute="top" constant="28" id="n2s-oi-NEW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q0w-ab-kdF"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                        <constraints>
+                            <constraint firstItem="62v-ss-dgh" firstAttribute="top" secondItem="ngu-dv-BEa" secondAttribute="top" id="0YA-Ng-yp8"/>
+                            <constraint firstAttribute="trailing" secondItem="62v-ss-dgh" secondAttribute="trailing" id="h6M-3t-Lru"/>
+                            <constraint firstItem="62v-ss-dgh" firstAttribute="leading" secondItem="ngu-dv-BEa" secondAttribute="leading" id="iXw-DP-CP0"/>
+                            <constraint firstAttribute="bottom" secondItem="62v-ss-dgh" secondAttribute="bottom" id="qlk-ja-0LR"/>
+                        </constraints>
+                        <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cwr-Wy-PEo"/>
+                    <size key="freeformSize" width="428" height="926"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="1Bu-FD-AcN" id="uwZ-cB-0Yk"/>
+                        <outlet property="calculateButton" destination="T1o-EO-vDK" id="gEi-L3-fc4"/>
+                        <outlet property="documentNumberTextField" destination="9Rd-fG-fhe" id="utW-wc-5HO"/>
+                        <outlet property="numberTeaDropDown" destination="gf6-UP-jag" id="Z5f-F2-j15"/>
+                        <outlet property="paymentDayDropDown" destination="bmS-Br-il1" id="l8G-fa-DCN"/>
+                        <outlet property="quoteToFinanceDropDown" destination="jkT-hN-1ny" id="h3a-f1-o9f"/>
+                        <outlet property="typeCardsDropDown" destination="QW9-v5-3id" id="chM-9A-HRL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c8L-rt-t0J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3148.7850467289718" y="-464.2980561555076"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
