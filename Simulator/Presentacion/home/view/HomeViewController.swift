@@ -7,6 +7,7 @@
 
 import UIKit
 import iOSDropDown
+import Alamofire
 
 class HomeViewController: UIViewController, UITextFieldDelegate {
     
@@ -47,6 +48,13 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         numberTeaDropDown.optionArray = ["98.00 %","45.00 %","89.90 %"]
         paymentDayDropDown.optionArray = ["1","2","3","4","5","6"]
         
+        let headers: HTTPHeaders = [
+            "Authorization": "BEARER abdnhzodkjyxjmcazs5tgxzfer5ij00pe9ho6g1h",
+            "Accept": "application/json"
+        ]
+         AF.request("http://35.192.80.171/bootcamp/wp-json/bcp/simulator", method:.get, headers: headers).response {
+            response in debugPrint(response)
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,

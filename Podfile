@@ -6,6 +6,7 @@ target 'Simulator' do
   use_frameworks!
   pod 'iOSDropDown'
   pod 'IQKeyboardManagerSwift'
+  pod 'Alamofire'
 		
   # Pods for Simulator
 
