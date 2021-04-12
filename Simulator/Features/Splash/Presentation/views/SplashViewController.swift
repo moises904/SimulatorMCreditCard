@@ -12,7 +12,6 @@ class SplashViewController: UIViewController {
     
     
     @IBOutlet weak var animationViewSplash: AnimationView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,9 +34,10 @@ class SplashViewController: UIViewController {
     @objc func goToHome() {
         let story = UIStoryboard(name: "Home", bundle: nil)
         let homeViewController = story.instantiateViewController( identifier: "IdHomeViewController")
-        self.navigationController?.popToViewController(self , animated: true)
+        //self.navigationController?.popToViewController(self , animated: true)
         self.navigationController?.pushViewController(homeViewController, animated: true)
     }
+
 
 
 }

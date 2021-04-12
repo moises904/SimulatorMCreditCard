@@ -10,6 +10,7 @@ import Foundation
 
 protocol SimulatorRepository {
     
-   func getDataForSimulate()
+    func getDataForSimulate() -> Void
    func getSimulatePayment()
+    
 }
