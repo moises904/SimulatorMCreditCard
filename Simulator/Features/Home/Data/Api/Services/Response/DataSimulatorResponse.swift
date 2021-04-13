@@ -15,11 +15,21 @@ struct DataSimulatorResponse : Decodable {
     private enum CodingKeys: String, CodingKey {
         case codeResponse = "code"
         case responseData = "response"
+      
     }
-    
     
     struct BodyResponse: Decodable {
         let tarjetas: Tarjetas
+        let lstQuotes: [Int]
+        let listTeas: [String]
+        let paymentDays: [String]
+        
+        private enum CodingKeys: String, CodingKey {
+            case tarjetas
+            case lstQuotes    = "cuotas"
+            case paymentDays  = "dias_pagos"
+            case listTeas     = "tea"
+        }
     }
     
     struct Tarjetas: Decodable {
@@ -27,13 +37,25 @@ struct DataSimulatorResponse : Decodable {
         let nameClasica: String
         let nameGold: String
         let nameBlack: String
+        
         private enum CodingKeys: String, CodingKey {
             case nameClasica = "clasica"
             case nameGold = "oro"
             case nameBlack = "black"
         }
+        
     }
     
+    struct PaymentDay: Decodable {
+        let paymentDay: Int
+    }
+    
+    struct Tea : Decodable {
+        let valueTea: Int
+        
+        
+    }
+ 
     
     func getDataSimulatorModel() -> DataSimulatorModel {
         

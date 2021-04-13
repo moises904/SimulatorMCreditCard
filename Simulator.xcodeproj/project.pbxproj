@@ -36,6 +36,7 @@
 		B5C7EE4E262281A900527029 /* SimulatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7EE4D262281A900527029 /* SimulatorUseCase.swift */; };
 		B5C7EE542622856300527029 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7EE532622856300527029 /* HomeViewModel.swift */; };
 		B5D7CDEB26256E4B007A7DE7 /* DataSimulatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CDEA26256E4B007A7DE7 /* DataSimulatorModel.swift */; };
+		B5D7CE182625D7FC007A7DE7 /* ApiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CE172625D7FC007A7DE7 /* ApiBuilder.swift */; };
 		B5FC662F26183873007AB4C6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B5FC662E26183873007AB4C6 /* Lottie */; settings = {ATTRIBUTES = (Required, ); }; };
 		B5FC6693261986E8007AB4C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC6692261986E8007AB4C6 /* HomeViewController.swift */; };
 		BFF57D6DFA8B7FB0339EFF91 /* Pods_Simulator_SimulatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDB181C67EA02DD949450FB /* Pods_Simulator_SimulatorUITests.framework */; };
@@ -115,6 +116,7 @@
 		B5C7EE4D262281A900527029 /* SimulatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorUseCase.swift; sourceTree = "<group>"; };
 		B5C7EE532622856300527029 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B5D7CDEA26256E4B007A7DE7 /* DataSimulatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimulatorModel.swift; sourceTree = "<group>"; };
+		B5D7CE172625D7FC007A7DE7 /* ApiBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBuilder.swift; sourceTree = "<group>"; };
 		B5FC6692261986E8007AB4C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CABDEB31649A597AD535C2D1 /* Pods-Simulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simulator.release.xcconfig"; path = "Target Support Files/Pods-Simulator/Pods-Simulator.release.xcconfig"; sourceTree = "<group>"; };
 		CBDB181C67EA02DD949450FB /* Pods_Simulator_SimulatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simulator_SimulatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +257,7 @@
 				B5A5C5E426214D9800590A51 /* Services */,
 				B506868926200EB20008ECC9 /* Config */,
 				B5068691262010710008ECC9 /* Base */,
+				B5D7CE172625D7FC007A7DE7 /* ApiBuilder.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 				B5BFA61B2622B52B00D2E638 /* AppDIContainer.swift in Sources */,
 				B524B48F261F96DD00B8DB01 /* ResultViewController.swift in Sources */,
 				B5068693262010C30008ECC9 /* BaseApiError.swift in Sources */,
+				B5D7CE182625D7FC007A7DE7 /* ApiBuilder.swift in Sources */,
 				B506868B26200EEF0008ECC9 /* Configuration.swift in Sources */,
 				B5C7EE4E262281A900527029 /* SimulatorUseCase.swift in Sources */,
 				B50686A8262015F80008ECC9 /* SimulatorRepository.swift in Sources */,

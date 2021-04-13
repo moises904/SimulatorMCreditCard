@@ -12,7 +12,7 @@ import Alamofire
 final class HomeViewController: UIViewController, UITextFieldDelegate, StoryboardInstantiable, LoadDataSimulator {
     
     func loadData(data: DataSimulatorResponse) {
-        loadCardData(data: data)
+        loadCardData(dataSimulator: data)
     }
     
     func loadError(aferror: AFError) {
@@ -37,7 +37,6 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     
     let maxCharacterDocumentNumber = 8
     
-    
     static func create(with viewModel: HomeViewModel) -> HomeViewController {
         let view = HomeViewController.instantiateViewController()
         view.homeViewModel = viewModel
@@ -47,11 +46,8 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeView()
-        loadDataSimulate()
         
     }
-    
-    
     
     private func initializeView() {
         
@@ -62,21 +58,6 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
         typeCardsDropDown.delegate = self
         homeViewModel = HomeViewModel (loadDataSimulator: self)
         homeViewModel?.getDataForLoadSimulator()
-    }
-    
-    private func loadDataSimulate() {
-        
-        quoteToFinanceDropDown.optionArray = ["1","2","3","4"]
-        numberTeaDropDown.optionArray = ["98.00 %","45.00 %","89.90 %"]
-        paymentDayDropDown.optionArray = ["1","2","3","4","5","6"]
-        /*
-        let headers: HTTPHeaders = [
-            "Authorization": "BEARER abdnhzodkjyxjmcazs5tgxzfer5ij00pe9ho6g1h",
-            "Accept": "application/json"
-        ]
-         AF.request("http://35.192.80.171/bootcamp/wp-json/bcp/simulator", method:.get, headers: headers).response {
-            response in debugPrint(response)
-        }*/
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
@@ -98,10 +79,13 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
         self.navigationController?.pushViewController(resultViewController, animated: true)
     }
     
-    private func loadCardData(data: DataSimulatorResponse) {
+    private func loadCardData(dataSimulator: DataSimulatorResponse) {
      
-        let creditCars = data.responseData.tarjetas
+        let creditCars = dataSimulator.responseData.tarjetas
         typeCardsDropDown.optionArray = [creditCars.nameClasica, creditCars.nameBlack, creditCars.nameGold]
+        quoteToFinanceDropDown.optionArray = dataSimulator.responseData.lstQuotes.map { String($0)  }
+        paymentDayDropDown.optionArray = dataSimulator.responseData.paymentDays
+        numberTeaDropDown.optionArray = dataSimulator.responseData.listTeas
 
     }
 }

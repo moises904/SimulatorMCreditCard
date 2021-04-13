@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+
 class SimulatorRepository : ISimulatorRepository {
     
     
@@ -17,19 +18,15 @@ class SimulatorRepository : ISimulatorRepository {
     
     func getDataForSimulate(completion:@escaping (Result<DataSimulatorResponse, AFError>)->Void) -> Void {
         
-        let headers: HTTPHeaders = [Configuration.AUTORIZATHION: Configuration.PASSWORD,
-                                    Configuration.ACCEPT: Configuration.CONTECT_JSON]
-        
-        AF.request(Configuration.basePathSimulator , method:.get, headers: headers).responseDecodable {
+        ApiBuilder.generateRequest()?.responseDecodable {
             (response: AFDataResponse<DataSimulatorResponse>) in
             completion(response.result)
         }
-        
     }
     
     func getSimulatePayment() {
         print("calculate simulate")
-
+        
     }
     
     
