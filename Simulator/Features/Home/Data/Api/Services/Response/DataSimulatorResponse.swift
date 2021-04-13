@@ -33,4 +33,13 @@ struct DataSimulatorResponse : Decodable {
             case nameBlack = "black"
         }
     }
+    
+    
+    func getDataSimulatorModel() -> DataSimulatorModel {
+        
+        let cards = Cards(classic: self.responseData.tarjetas.nameClasica,gold: self.responseData.tarjetas.nameGold,
+                          black: self.responseData.tarjetas.nameBlack)
+        return DataSimulatorModel(cards: cards)
+        
+    }
 }

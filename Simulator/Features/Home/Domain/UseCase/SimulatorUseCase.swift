@@ -6,18 +6,28 @@
 //
 
 import Foundation
+import Alamofire
 
-class SimulatorUseCase {
+protocol ISimulatorUseCase {
+    func execute(completion: @escaping(Result<DataSimulatorResponse, AFError>)->Void) }
+
+
+class SimulatorUseCase: ISimulatorUseCase {
     
-    private let simulatorRepositoryImp: SimulatorRepositoryImpl?
+    private let simulatorRepositoryImp: SimulatorRepository?
     
     init() {
-        self.simulatorRepositoryImp = SimulatorRepositoryImpl()
+        self.simulatorRepositoryImp = SimulatorRepository()
     }
     
-    func getDataFromSimulation() {
-        
-        self.simulatorRepositoryImp?.getDataForSimulate()
+    func execute(completion: @escaping (Result<DataSimulatorResponse, AFError>) -> Void) {
+         simulatorRepositoryImp?.getDataForSimulate(completion: { result in
+             completion(result)
+        })
     }
     
+    
+  
+    
+  
 }
