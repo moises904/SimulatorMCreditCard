@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.4.2)
   - iOSDropDown (0.3.4)
   - IQKeyboardManagerSwift (6.5.6)
+  - RxSwift (6.1.0)
   - Swinject (2.7.1)
   - SwinjectAutoregistration (2.7.0):
     - Swinject (~> 2.7)
@@ -10,6 +11,7 @@ DEPENDENCIES:
   - Alamofire
   - iOSDropDown
   - IQKeyboardManagerSwift
+  - RxSwift
   - Swinject
   - SwinjectAutoregistration
 
@@ -18,6 +20,7 @@ SPEC REPOS:
     - Alamofire
     - iOSDropDown
     - IQKeyboardManagerSwift
+    - RxSwift
     - Swinject
     - SwinjectAutoregistration
 
@@ -25,9 +28,10 @@ SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: 7a6b19e1fc41f510dcee7de279b0f7c3f097a166
+PODFILE CHECKSUM: d70844ec076f99d8071d9096d332f87dbdb2a8e9
 
 COCOAPODS: 1.10.1

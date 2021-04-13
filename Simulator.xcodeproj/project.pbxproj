@@ -18,12 +18,12 @@
 		B504FB4E261065680020F07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B504FB4C261065680020F07C /* LaunchScreen.storyboard */; };
 		B504FB59261065680020F07C /* SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB58261065680020F07C /* SimulatorTests.swift */; };
 		B504FB64261065680020F07C /* SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB63261065680020F07C /* SimulatorUITests.swift */; };
-		B506868B26200EEF0008ECC9 /* APIUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506868A26200EEF0008ECC9 /* APIUrl.swift */; };
+		B506868B26200EEF0008ECC9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506868A26200EEF0008ECC9 /* Configuration.swift */; };
 		B5068693262010C30008ECC9 /* BaseApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5068692262010C30008ECC9 /* BaseApiError.swift */; };
 		B5068699262012340008ECC9 /* ApiRequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5068698262012340008ECC9 /* ApiRequestBase.swift */; };
 		B506869D262012480008ECC9 /* DataSimulatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506869C262012480008ECC9 /* DataSimulatorResponse.swift */; };
-		B50686A1262014780008ECC9 /* SimulatorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50686A0262014780008ECC9 /* SimulatorRepository.swift */; };
-		B50686A8262015F80008ECC9 /* SimulatorRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50686A7262015F80008ECC9 /* SimulatorRepositoryImpl.swift */; };
+		B50686A1262014780008ECC9 /* ISimulatorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50686A0262014780008ECC9 /* ISimulatorRepository.swift */; };
+		B50686A8262015F80008ECC9 /* SimulatorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50686A7262015F80008ECC9 /* SimulatorRepository.swift */; };
 		B524B46A261D0E8E00B8DB01 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B524B469261D0E8E00B8DB01 /* iOSDropDown.framework */; };
 		B524B47D261EB5AC00B8DB01 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B524B47C261EB5AC00B8DB01 /* IQKeyboardManagerSwift.framework */; };
 		B524B48F261F96DD00B8DB01 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524B48E261F96DD00B8DB01 /* ResultViewController.swift */; };
@@ -35,6 +35,7 @@
 		B5BFA61B2622B52B00D2E638 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA61A2622B52B00D2E638 /* AppDIContainer.swift */; };
 		B5C7EE4E262281A900527029 /* SimulatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7EE4D262281A900527029 /* SimulatorUseCase.swift */; };
 		B5C7EE542622856300527029 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7EE532622856300527029 /* HomeViewModel.swift */; };
+		B5D7CDEB26256E4B007A7DE7 /* DataSimulatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CDEA26256E4B007A7DE7 /* DataSimulatorModel.swift */; };
 		B5FC662F26183873007AB4C6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B5FC662E26183873007AB4C6 /* Lottie */; settings = {ATTRIBUTES = (Required, ); }; };
 		B5FC6693261986E8007AB4C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC6692261986E8007AB4C6 /* HomeViewController.swift */; };
 		BFF57D6DFA8B7FB0339EFF91 /* Pods_Simulator_SimulatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDB181C67EA02DD949450FB /* Pods_Simulator_SimulatorUITests.framework */; };
@@ -92,12 +93,12 @@
 		B504FB5F261065680020F07C /* SimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B504FB63261065680020F07C /* SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorUITests.swift; sourceTree = "<group>"; };
 		B504FB65261065680020F07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B506868A26200EEF0008ECC9 /* APIUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrl.swift; sourceTree = "<group>"; };
+		B506868A26200EEF0008ECC9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		B5068692262010C30008ECC9 /* BaseApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiError.swift; sourceTree = "<group>"; };
 		B5068698262012340008ECC9 /* ApiRequestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBase.swift; sourceTree = "<group>"; };
 		B506869C262012480008ECC9 /* DataSimulatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimulatorResponse.swift; sourceTree = "<group>"; };
-		B50686A0262014780008ECC9 /* SimulatorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorRepository.swift; sourceTree = "<group>"; };
-		B50686A7262015F80008ECC9 /* SimulatorRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorRepositoryImpl.swift; sourceTree = "<group>"; };
+		B50686A0262014780008ECC9 /* ISimulatorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISimulatorRepository.swift; sourceTree = "<group>"; };
+		B50686A7262015F80008ECC9 /* SimulatorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorRepository.swift; sourceTree = "<group>"; };
 		B524B449261D0AE000B8DB01 /* Dropdowns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Dropdowns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B524B459261D0DF300B8DB01 /* Dropdowns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Dropdowns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B524B469261D0E8E00B8DB01 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +114,7 @@
 		B5BFA61A2622B52B00D2E638 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		B5C7EE4D262281A900527029 /* SimulatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorUseCase.swift; sourceTree = "<group>"; };
 		B5C7EE532622856300527029 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B5D7CDEA26256E4B007A7DE7 /* DataSimulatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimulatorModel.swift; sourceTree = "<group>"; };
 		B5FC6692261986E8007AB4C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CABDEB31649A597AD535C2D1 /* Pods-Simulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simulator.release.xcconfig"; path = "Target Support Files/Pods-Simulator/Pods-Simulator.release.xcconfig"; sourceTree = "<group>"; };
 		CBDB181C67EA02DD949450FB /* Pods_Simulator_SimulatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simulator_SimulatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,7 +244,7 @@
 		B506868926200EB20008ECC9 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				B506868A26200EEF0008ECC9 /* APIUrl.swift */,
+				B506868A26200EEF0008ECC9 /* Configuration.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -269,7 +271,7 @@
 		B50686A62620154A0008ECC9 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				B50686A7262015F80008ECC9 /* SimulatorRepositoryImpl.swift */,
+				B50686A7262015F80008ECC9 /* SimulatorRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -277,6 +279,7 @@
 		B524B492261FD20D00B8DB01 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B5D7CDE926256E0E007A7DE7 /* Model */,
 				B524B494261FD26100B8DB01 /* UseCase */,
 				B524B493261FD21A00B8DB01 /* Repository */,
 			);
@@ -286,7 +289,7 @@
 		B524B493261FD21A00B8DB01 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				B50686A0262014780008ECC9 /* SimulatorRepository.swift */,
+				B50686A0262014780008ECC9 /* ISimulatorRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -480,6 +483,14 @@
 				B524B4BE261FFB5B00B8DB01 /* viewmodel */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B5D7CDE926256E0E007A7DE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5D7CDEA26256E4B007A7DE7 /* DataSimulatorModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -730,19 +741,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D7CDEB26256E4B007A7DE7 /* DataSimulatorModel.swift in Sources */,
 				B5BFA61B2622B52B00D2E638 /* AppDIContainer.swift in Sources */,
 				B524B48F261F96DD00B8DB01 /* ResultViewController.swift in Sources */,
 				B5068693262010C30008ECC9 /* BaseApiError.swift in Sources */,
-				B506868B26200EEF0008ECC9 /* APIUrl.swift in Sources */,
+				B506868B26200EEF0008ECC9 /* Configuration.swift in Sources */,
 				B5C7EE4E262281A900527029 /* SimulatorUseCase.swift in Sources */,
-				B50686A8262015F80008ECC9 /* SimulatorRepositoryImpl.swift in Sources */,
+				B50686A8262015F80008ECC9 /* SimulatorRepository.swift in Sources */,
 				B506869D262012480008ECC9 /* DataSimulatorResponse.swift in Sources */,
 				B504FB46261065670020F07C /* SplashViewController.swift in Sources */,
 				B5BFA6162622B30100D2E638 /* StoryboardInstantiable.swift in Sources */,
 				B5A5C5E626214DB700590A51 /* SimulatorService.swift in Sources */,
 				B504FB42261065670020F07C /* AppDelegate.swift in Sources */,
 				B5C7EE542622856300527029 /* HomeViewModel.swift in Sources */,
-				B50686A1262014780008ECC9 /* SimulatorRepository.swift in Sources */,
+				B50686A1262014780008ECC9 /* ISimulatorRepository.swift in Sources */,
 				B5068699262012340008ECC9 /* ApiRequestBase.swift in Sources */,
 				B504FB44261065670020F07C /* SceneDelegate.swift in Sources */,
 				B5FC6693261986E8007AB4C6 /* HomeViewController.swift in Sources */,

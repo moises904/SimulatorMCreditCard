@@ -16,9 +16,25 @@ enum LoadUserError: Error, Equatable {
 
 protocol SimulatorService {
     func getParametersSimulator(completionHandler: @escaping (Result<DataSimulatorResponse, ApiError>) -> Void)
+    func getParametersSimulator2(completion:@escaping (Result<DataSimulatorResponse, AFError>)->Void)
 }
 
 class SimulatorServiceImp : SimulatorService {
+
+    
+    
+    func getParametersSimulator2(completion:@escaping (Result<DataSimulatorResponse, AFError>)->Void) {
+            
+        let headers: HTTPHeaders = ["Authorization": "BEARER abdnhzodkjyxjmcazs5tgxzfer5ij00pe9ho6g1h",
+                                    "Accept": "application/json"]
+        
+        AF.request(Configuration.basePathSimulator , method:.get, headers: headers).responseDecodable {
+            (response: AFDataResponse<DataSimulatorResponse>) in
+
+            completion(response.result)
+        }
+    }
+    
     
     public init() {
         
@@ -30,7 +46,7 @@ class SimulatorServiceImp : SimulatorService {
         let headers: HTTPHeaders = ["Authorization": "BEARER abdnhzodkjyxjmcazs5tgxzfer5ij00pe9ho6g1h",
                                     "Accept": "application/json"]
         
-        AF.request(Urls.basePathSimulator , method:.get, headers: headers)
+        AF.request(Configuration.basePathSimulator , method:.get, headers: headers)
             .validate()
             .responseDecodable { (response: AFDataResponse<DataSimulatorResponse>) in
                 print("************************************+*+")

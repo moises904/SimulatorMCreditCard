@@ -9,7 +9,16 @@ import UIKit
 import iOSDropDown
 import Alamofire
 
-final class HomeViewController: UIViewController, UITextFieldDelegate, StoryboardInstantiable {
+final class HomeViewController: UIViewController, UITextFieldDelegate, StoryboardInstantiable, LoadDataSimulator {
+    
+    func loadData(data: DataSimulatorResponse) {
+        loadCardData(data: data)
+    }
+    
+    func loadError(aferror: AFError) {
+        //<#code#>
+    }
+    
     
     
     @IBOutlet weak var documentNumberTextField: UITextField!
@@ -51,12 +60,12 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
         self.navigationItem.hidesBackButton = true
         documentNumberTextField.delegate = self
         typeCardsDropDown.delegate = self
-        homeViewModel = HomeViewModel ()
+        homeViewModel = HomeViewModel (loadDataSimulator: self)
         homeViewModel?.getDataForLoadSimulator()
     }
     
     private func loadDataSimulate() {
-        typeCardsDropDown.optionArray = ["Option 1", "Option 2", "Option 3"]
+        
         quoteToFinanceDropDown.optionArray = ["1","2","3","4"]
         numberTeaDropDown.optionArray = ["98.00 %","45.00 %","89.90 %"]
         paymentDayDropDown.optionArray = ["1","2","3","4","5","6"]
@@ -89,4 +98,10 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
         self.navigationController?.pushViewController(resultViewController, animated: true)
     }
     
+    private func loadCardData(data: DataSimulatorResponse) {
+     
+        let creditCars = data.responseData.tarjetas
+        typeCardsDropDown.optionArray = [creditCars.nameClasica, creditCars.nameBlack, creditCars.nameGold]
+
+    }
 }

@@ -9,6 +9,7 @@ target 'Simulator' do
   pod 'Alamofire'
   pod 'Swinject'
   pod 'SwinjectAutoregistration'	
+  pod 'RxSwift'
 	
   # Pods for Simulator
 
