@@ -80,12 +80,25 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     }
     
     private func loadCardData(dataSimulator: DataSimulatorResponse) {
-     
+        
+        let currentIndex:Int = 0
+        
         let creditCars = dataSimulator.responseData.tarjetas
         typeCardsDropDown.optionArray = [creditCars.nameClasica, creditCars.nameBlack, creditCars.nameGold]
+        typeCardsDropDown.selectedIndex = currentIndex
+        typeCardsDropDown.text = typeCardsDropDown.optionArray[currentIndex]
+        
         quoteToFinanceDropDown.optionArray = dataSimulator.responseData.lstQuotes.map { String($0)  }
+        quoteToFinanceDropDown.selectedIndex = currentIndex
+        quoteToFinanceDropDown.text = quoteToFinanceDropDown.optionArray[currentIndex]
+        
         paymentDayDropDown.optionArray = dataSimulator.responseData.paymentDays
+        paymentDayDropDown.selectedIndex = currentIndex
+        paymentDayDropDown.text = paymentDayDropDown.optionArray[currentIndex]
+        
         numberTeaDropDown.optionArray = dataSimulator.responseData.listTeas
+        numberTeaDropDown.selectedIndex = currentIndex
+        numberTeaDropDown.text = numberTeaDropDown.optionArray[currentIndex]
 
     }
 }
