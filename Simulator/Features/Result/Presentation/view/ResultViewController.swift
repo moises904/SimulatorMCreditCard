@@ -9,6 +9,8 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
+    private var resultSimulator: ResultSimulatedResponse?
+    
     @IBAction func clickReturSimulate(_ sender: Any) {
         
         self.navigationController?.popViewController(animated: true)
@@ -16,5 +18,10 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         self.navigationItem.title = "Simulador de Compras con Tarjeta"
         
+    }
+    
+    func loadDataResultSimulator(resultData: ResultSimulatedResponse) {
+        self.resultSimulator = resultData
+        print(resultSimulator?.response.firstQuote)
     }
 }

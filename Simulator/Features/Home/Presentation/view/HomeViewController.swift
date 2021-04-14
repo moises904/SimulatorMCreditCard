@@ -10,7 +10,7 @@ import iOSDropDown
 import Alamofire
 final class HomeViewController: UIViewController, UITextFieldDelegate, StoryboardInstantiable, LoadDataSimulator {
     func loadResult(resultSimulator: ResultSimulatedResponse) {
-        goToResultSimulate()
+        goToResultSimulate(resultSimulator: resultSimulator)
 
     }
     
@@ -88,12 +88,13 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
         homeViewModel?.calculatePayment(dataCalculate: dataSimulation)
     }
 
-    func goToResultSimulate() {
+    func goToResultSimulate(resultSimulator: ResultSimulatedResponse) {
         
         let story = UIStoryboard(name: "Result", bundle: nil)
-        let resultViewController = story.instantiateViewController( identifier: "IdResultViewController")
+        let resultViewController = story.instantiateViewController( identifier: "IdResultViewController") as? ResultViewController
+        resultViewController?.loadDataResultSimulator(resultData: resultSimulator)
         self.navigationController?.popToViewController(self , animated: true)
-        self.navigationController?.pushViewController(resultViewController, animated: true)
+        self.navigationController?.pushViewController(resultViewController!, animated: true)
     }
     
     private func loadCardData(dataSimulator: ParametersSimulatorResponse) {
