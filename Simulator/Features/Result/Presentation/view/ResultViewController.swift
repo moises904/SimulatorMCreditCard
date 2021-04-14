@@ -20,7 +20,7 @@ class ResultViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     override func viewDidLoad() {
-        self.navigationItem.title = "Simulador de Compras con Tarjeta"
+        self.navigationItem.title = Constants.TITLE_SCREEN_APP
         showResultSimulate()
     }
     

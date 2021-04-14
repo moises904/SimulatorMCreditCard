@@ -22,9 +22,7 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     func loadError(aferror: AFError) {
         //<#code#>
     }
-    
-    
-    
+
     
     @IBOutlet weak var documentNumberTextField: UITextField!
     @IBOutlet weak var typeCardsDropDown: DropDown!
@@ -33,6 +31,11 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     @IBOutlet weak var numberTeaDropDown: DropDown!
     @IBOutlet weak var paymentDayDropDown: DropDown!
     @IBOutlet weak var calculateButton: UIButton!
+    
+    @IBAction func dropdownBeginEdit(_ sender: Any) {
+        self.view.endEditing(true)
+        
+    }
     
     private var homeViewModel : HomeViewModel?
     
@@ -56,7 +59,7 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     
     private func initializeView() {
         
-        self.navigationItem.title = "Simulador de Compras con Tarjeta"
+        self.navigationItem.title = Constants.TITLE_SCREEN_APP
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.hidesBackButton = true
         documentNumberTextField.delegate = self
@@ -68,8 +71,6 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
                            replacementString string: String) -> Bool
     {
-        
-
         
         let currentString: NSString = documentNumberTextField.text! as NSString
         let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
