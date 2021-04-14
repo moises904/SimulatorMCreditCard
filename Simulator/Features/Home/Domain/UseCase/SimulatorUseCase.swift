@@ -9,10 +9,14 @@ import Foundation
 import Alamofire
 
 protocol ISimulatorUseCase {
-    func execute(completion: @escaping(Result<DataSimulatorResponse, AFError>)->Void) }
+    func execute(completion: @escaping(Result<ParametersSimulatorResponse, AFError>)->Void)
+    func execute(dataForCalculate: DataSimulatedRequest, completion: @escaping(Result<ResultSimulatedResponse, AFError>)->Void )
+}
 
 
 class SimulatorUseCase: ISimulatorUseCase {
+    
+    
     
     private let simulatorRepositoryImp: SimulatorRepository?
     
@@ -20,14 +24,19 @@ class SimulatorUseCase: ISimulatorUseCase {
         self.simulatorRepositoryImp = SimulatorRepository()
     }
     
-    func execute(completion: @escaping (Result<DataSimulatorResponse, AFError>) -> Void) {
+    func execute(completion: @escaping (Result<ParametersSimulatorResponse, AFError>) -> Void) {
          simulatorRepositoryImp?.getDataForSimulate(completion: { result in
              completion(result)
         })
     }
     
     
-  
+    func execute(dataForCalculate: DataSimulatedRequest, completion: @escaping(Result<ResultSimulatedResponse, AFError>)->Void) {
+        self.simulatorRepositoryImp?.getSimulatePayment(dataForCalculate: dataForCalculate, completion: {
+            result in
+            completion(result)
+        })
+    }
     
   
 }

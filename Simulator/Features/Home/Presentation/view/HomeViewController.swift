@@ -8,16 +8,21 @@
 import UIKit
 import iOSDropDown
 import Alamofire
-
 final class HomeViewController: UIViewController, UITextFieldDelegate, StoryboardInstantiable, LoadDataSimulator {
+    func loadResult(resultSimulator: ResultSimulatedResponse) {
+        goToResultSimulate()
+
+    }
     
-    func loadData(data: DataSimulatorResponse) {
+    
+    func loadData(data: ParametersSimulatorResponse) {
         loadCardData(dataSimulator: data)
     }
     
     func loadError(aferror: AFError) {
         //<#code#>
     }
+    
     
     
     
@@ -32,7 +37,7 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     private var homeViewModel : HomeViewModel?
     
     @IBAction func clickCalculate(_ sender: UIButton) {
-        goToResultSimulate()
+        calculateSimulation()
     }
     
     let maxCharacterDocumentNumber = 8
@@ -70,6 +75,18 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
         let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= maxCharacterDocumentNumber
     }
+    
+    func calculateSimulation() {
+        let documentNumber = documentNumberTextField.text
+        let descriptionCard = typeCardsDropDown.text
+        let amountForSimulate = amountTextField.text
+        let currentTea = numberTeaDropDown.text
+        let numbreQuote = quoteToFinanceDropDown.text
+        let numberDay = paymentDayDropDown.text
+        let dataSimulation = DataSimulatedRequest(dni:documentNumber, tarjeta:descriptionCard, monto:amountForSimulate,
+                                                  cuotas:numbreQuote, tea:currentTea, dia_pago:numberDay )
+        homeViewModel?.calculatePayment(dataCalculate: dataSimulation)
+    }
 
     func goToResultSimulate() {
         
@@ -79,14 +96,15 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
         self.navigationController?.pushViewController(resultViewController, animated: true)
     }
     
-    private func loadCardData(dataSimulator: DataSimulatorResponse) {
+    private func loadCardData(dataSimulator: ParametersSimulatorResponse) {
         
         let currentIndex:Int = 0
-        
+        documentNumberTextField.text="23234212"
+        amountTextField.text="1000"
         let creditCars = dataSimulator.responseData.tarjetas
         typeCardsDropDown.optionArray = [creditCars.nameClasica, creditCars.nameBlack, creditCars.nameGold]
-        typeCardsDropDown.selectedIndex = currentIndex
-        typeCardsDropDown.text = typeCardsDropDown.optionArray[currentIndex]
+        typeCardsDropDown.selectedIndex = currentIndex+1
+        typeCardsDropDown.text = typeCardsDropDown.optionArray[currentIndex+1]
         
         quoteToFinanceDropDown.optionArray = dataSimulator.responseData.lstQuotes.map { String($0)  }
         quoteToFinanceDropDown.selectedIndex = currentIndex

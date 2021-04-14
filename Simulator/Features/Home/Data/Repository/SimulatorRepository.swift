@@ -16,17 +16,22 @@ class SimulatorRepository : ISimulatorRepository {
         
     }
     
-    func getDataForSimulate(completion:@escaping (Result<DataSimulatorResponse, AFError>)->Void) -> Void {
+    func getDataForSimulate(completion:@escaping (Result<ParametersSimulatorResponse, AFError>)->Void) -> Void {
         
-        ApiBuilder.generateRequest()?.responseDecodable {
-            (response: AFDataResponse<DataSimulatorResponse>) in
+        ApiBuilder.generateSimpleRequest()?.responseDecodable {
+            (response: AFDataResponse<ParametersSimulatorResponse>) in
             completion(response.result)
         }
     }
     
-    func getSimulatePayment() {
+    func getSimulatePayment(dataForCalculate: DataSimulatedRequest,
+                            completion: @escaping(Result<ResultSimulatedResponse, AFError>)->Void) {
         print("calculate simulate")
-        
+        ApiBuilder.generateRequesst(request: dataForCalculate)?.responseDecodable {
+            (response: AFDataResponse<ResultSimulatedResponse>) in
+            debugPrint(response)
+            completion(response.result)
+        }
     }
     
     

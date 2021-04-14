@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DataSimulatorResponse : Decodable {
+struct ParametersSimulatorResponse : Decodable {
     
     let codeResponse: Int
     let responseData: BodyResponse

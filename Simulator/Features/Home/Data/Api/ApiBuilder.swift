@@ -17,11 +17,25 @@ class ApiBuilder {
             return AF.request(request)
     }
     
-    static func generateRequest()->DataRequest? {
+    static func generateSimpleRequest()->DataRequest? {
         let headers: HTTPHeaders? = [Configuration.AUTORIZATHION: Configuration.PASSWORD,
                                      Configuration.ACCEPT: Configuration.CONTECT_JSON]
         
         return AF.request(Configuration.basePathSimulator , method:.get, headers: headers)
+    }
+    
+    static func generateRequesst(request: DataSimulatedRequest)->DataRequest? {
+
+        
+        let headers: HTTPHeaders? = [Configuration.AUTORIZATHION: Configuration.PASSWORD,
+                                     Configuration.ACCEPT: "*/*",
+                                     "Content-Type":"application/x-www-form-urlencoded",
+                                     "User-Agent":"Iphone","Accept-Encoding":"gzip, deflate, br"]
+        
+        let request =  AF.request(Configuration.basePathSimulator , method:.post,parameters: request,
+                                   encoder: URLEncodedFormParameterEncoder.default, headers:headers).validate()
+        debugPrint(request)
+        return request
     }
 }
 

@@ -21,7 +21,7 @@
 		B506868B26200EEF0008ECC9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506868A26200EEF0008ECC9 /* Configuration.swift */; };
 		B5068693262010C30008ECC9 /* BaseApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5068692262010C30008ECC9 /* BaseApiError.swift */; };
 		B5068699262012340008ECC9 /* ApiRequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5068698262012340008ECC9 /* ApiRequestBase.swift */; };
-		B506869D262012480008ECC9 /* DataSimulatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506869C262012480008ECC9 /* DataSimulatorResponse.swift */; };
+		B506869D262012480008ECC9 /* ParametersSimulatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506869C262012480008ECC9 /* ParametersSimulatorResponse.swift */; };
 		B50686A1262014780008ECC9 /* ISimulatorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50686A0262014780008ECC9 /* ISimulatorRepository.swift */; };
 		B50686A8262015F80008ECC9 /* SimulatorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50686A7262015F80008ECC9 /* SimulatorRepository.swift */; };
 		B524B46A261D0E8E00B8DB01 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B524B469261D0E8E00B8DB01 /* iOSDropDown.framework */; };
@@ -30,6 +30,7 @@
 		B524B4A8261FE59A00B8DB01 /* simulator_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = B524B4A7261FE59A00B8DB01 /* simulator_splash.json */; };
 		B524B4B7261FF9A800B8DB01 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B524B4B6261FF9A800B8DB01 /* Home.storyboard */; };
 		B524B4C0261FFB8800B8DB01 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B524B4BF261FFB8800B8DB01 /* Result.storyboard */; };
+		B57057522626479C00012FA4 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57057512626479C00012FA4 /* BaseRequest.swift */; };
 		B5A5C5E626214DB700590A51 /* SimulatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C5E526214DB700590A51 /* SimulatorService.swift */; };
 		B5BFA6162622B30100D2E638 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA6152622B30100D2E638 /* StoryboardInstantiable.swift */; };
 		B5BFA61B2622B52B00D2E638 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA61A2622B52B00D2E638 /* AppDIContainer.swift */; };
@@ -37,6 +38,8 @@
 		B5C7EE542622856300527029 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7EE532622856300527029 /* HomeViewModel.swift */; };
 		B5D7CDEB26256E4B007A7DE7 /* DataSimulatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CDEA26256E4B007A7DE7 /* DataSimulatorModel.swift */; };
 		B5D7CE182625D7FC007A7DE7 /* ApiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CE172625D7FC007A7DE7 /* ApiBuilder.swift */; };
+		B5E88B3B2626002E0074B8E1 /* DataSimulatedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E88B3A2626002E0074B8E1 /* DataSimulatedRequest.swift */; };
+		B5E88B41262603C10074B8E1 /* ResultSimulatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E88B40262603C10074B8E1 /* ResultSimulatedResponse.swift */; };
 		B5FC662F26183873007AB4C6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B5FC662E26183873007AB4C6 /* Lottie */; settings = {ATTRIBUTES = (Required, ); }; };
 		B5FC6693261986E8007AB4C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC6692261986E8007AB4C6 /* HomeViewController.swift */; };
 		BFF57D6DFA8B7FB0339EFF91 /* Pods_Simulator_SimulatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDB181C67EA02DD949450FB /* Pods_Simulator_SimulatorUITests.framework */; };
@@ -97,7 +100,7 @@
 		B506868A26200EEF0008ECC9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		B5068692262010C30008ECC9 /* BaseApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiError.swift; sourceTree = "<group>"; };
 		B5068698262012340008ECC9 /* ApiRequestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBase.swift; sourceTree = "<group>"; };
-		B506869C262012480008ECC9 /* DataSimulatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimulatorResponse.swift; sourceTree = "<group>"; };
+		B506869C262012480008ECC9 /* ParametersSimulatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersSimulatorResponse.swift; sourceTree = "<group>"; };
 		B50686A0262014780008ECC9 /* ISimulatorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISimulatorRepository.swift; sourceTree = "<group>"; };
 		B50686A7262015F80008ECC9 /* SimulatorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorRepository.swift; sourceTree = "<group>"; };
 		B524B449261D0AE000B8DB01 /* Dropdowns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Dropdowns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +112,7 @@
 		B524B4B6261FF9A800B8DB01 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B524B4BF261FFB8800B8DB01 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		B53387A42622806300A43535 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57057512626479C00012FA4 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		B5A5C5E526214DB700590A51 /* SimulatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorService.swift; sourceTree = "<group>"; };
 		B5A5C5F826215AA200590A51 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BFA6152622B30100D2E638 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 		B5C7EE532622856300527029 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B5D7CDEA26256E4B007A7DE7 /* DataSimulatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimulatorModel.swift; sourceTree = "<group>"; };
 		B5D7CE172625D7FC007A7DE7 /* ApiBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBuilder.swift; sourceTree = "<group>"; };
+		B5E88B3A2626002E0074B8E1 /* DataSimulatedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimulatedRequest.swift; sourceTree = "<group>"; };
+		B5E88B40262603C10074B8E1 /* ResultSimulatedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSimulatedResponse.swift; sourceTree = "<group>"; };
 		B5FC6692261986E8007AB4C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CABDEB31649A597AD535C2D1 /* Pods-Simulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simulator.release.xcconfig"; path = "Target Support Files/Pods-Simulator/Pods-Simulator.release.xcconfig"; sourceTree = "<group>"; };
 		CBDB181C67EA02DD949450FB /* Pods_Simulator_SimulatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simulator_SimulatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -432,6 +438,8 @@
 		B5A5C5EB2621550F00590A51 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				B5E88B3A2626002E0074B8E1 /* DataSimulatedRequest.swift */,
+				B57057512626479C00012FA4 /* BaseRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -439,7 +447,8 @@
 		B5A5C5EC262155C900590A51 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				B506869C262012480008ECC9 /* DataSimulatorResponse.swift */,
+				B506869C262012480008ECC9 /* ParametersSimulatorResponse.swift */,
+				B5E88B40262603C10074B8E1 /* ResultSimulatedResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -748,19 +757,22 @@
 				B5BFA61B2622B52B00D2E638 /* AppDIContainer.swift in Sources */,
 				B524B48F261F96DD00B8DB01 /* ResultViewController.swift in Sources */,
 				B5068693262010C30008ECC9 /* BaseApiError.swift in Sources */,
+				B57057522626479C00012FA4 /* BaseRequest.swift in Sources */,
 				B5D7CE182625D7FC007A7DE7 /* ApiBuilder.swift in Sources */,
 				B506868B26200EEF0008ECC9 /* Configuration.swift in Sources */,
 				B5C7EE4E262281A900527029 /* SimulatorUseCase.swift in Sources */,
 				B50686A8262015F80008ECC9 /* SimulatorRepository.swift in Sources */,
-				B506869D262012480008ECC9 /* DataSimulatorResponse.swift in Sources */,
+				B506869D262012480008ECC9 /* ParametersSimulatorResponse.swift in Sources */,
 				B504FB46261065670020F07C /* SplashViewController.swift in Sources */,
 				B5BFA6162622B30100D2E638 /* StoryboardInstantiable.swift in Sources */,
+				B5E88B3B2626002E0074B8E1 /* DataSimulatedRequest.swift in Sources */,
 				B5A5C5E626214DB700590A51 /* SimulatorService.swift in Sources */,
 				B504FB42261065670020F07C /* AppDelegate.swift in Sources */,
 				B5C7EE542622856300527029 /* HomeViewModel.swift in Sources */,
 				B50686A1262014780008ECC9 /* ISimulatorRepository.swift in Sources */,
 				B5068699262012340008ECC9 /* ApiRequestBase.swift in Sources */,
 				B504FB44261065670020F07C /* SceneDelegate.swift in Sources */,
+				B5E88B41262603C10074B8E1 /* ResultSimulatedResponse.swift in Sources */,
 				B5FC6693261986E8007AB4C6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

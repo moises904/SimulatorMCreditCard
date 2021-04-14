@@ -15,21 +15,21 @@ enum LoadUserError: Error, Equatable {
 }
 
 protocol SimulatorService {
-    func getParametersSimulator(completionHandler: @escaping (Result<DataSimulatorResponse, ApiError>) -> Void)
-    func getParametersSimulator2(completion:@escaping (Result<DataSimulatorResponse, AFError>)->Void)
+    func getParametersSimulator(completionHandler: @escaping (Result<ParametersSimulatorResponse, ApiError>) -> Void)
+    func getParametersSimulator2(completion:@escaping (Result<ParametersSimulatorResponse, AFError>)->Void)
 }
 
 class SimulatorServiceImp : SimulatorService {
 
     
     
-    func getParametersSimulator2(completion:@escaping (Result<DataSimulatorResponse, AFError>)->Void) {
+    func getParametersSimulator2(completion:@escaping (Result<ParametersSimulatorResponse, AFError>)->Void) {
             
         let headers: HTTPHeaders = ["Authorization": "BEARER abdnhzodkjyxjmcazs5tgxzfer5ij00pe9ho6g1h",
                                     "Accept": "application/json"]
         
         AF.request(Configuration.basePathSimulator , method:.get, headers: headers).responseDecodable {
-            (response: AFDataResponse<DataSimulatorResponse>) in
+            (response: AFDataResponse<ParametersSimulatorResponse>) in
 
             completion(response.result)
         }
@@ -41,14 +41,14 @@ class SimulatorServiceImp : SimulatorService {
     }
     
     
-    func getParametersSimulator(completionHandler: @escaping (Result<DataSimulatorResponse,ApiError>) -> Void) {
+    func getParametersSimulator(completionHandler: @escaping (Result<ParametersSimulatorResponse,ApiError>) -> Void) {
         
         let headers: HTTPHeaders = ["Authorization": "BEARER abdnhzodkjyxjmcazs5tgxzfer5ij00pe9ho6g1h",
                                     "Accept": "application/json"]
         
         AF.request(Configuration.basePathSimulator , method:.get, headers: headers)
             .validate()
-            .responseDecodable { (response: AFDataResponse<DataSimulatorResponse>) in
+            .responseDecodable { (response: AFDataResponse<ParametersSimulatorResponse>) in
                 print("************************************+*+")
                 print(response)
                 switch response.result {

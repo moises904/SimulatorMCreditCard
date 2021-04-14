@@ -10,8 +10,9 @@ import Alamofire
 
 protocol LoadDataSimulator {
 
-    func loadData(data:DataSimulatorResponse)
+    func loadData(data:ParametersSimulatorResponse)
     func loadError(aferror: AFError)
+    func loadResult(resultSimulator: ResultSimulatedResponse)
     
 }
 
@@ -30,7 +31,7 @@ final  class HomeViewModel {
     @objc func getDataForLoadSimulator() {
         
         
-        let dataCompletation : (Result<DataSimulatorResponse,AFError>)->Void =  {
+        let dataCompletation : (Result<ParametersSimulatorResponse,AFError>)->Void =  {
             result in
             switch result {
                 case .success( let data):
@@ -51,7 +52,21 @@ final  class HomeViewModel {
          
     }
 
-    
+    func calculatePayment(dataCalculate: DataSimulatedRequest) {
+        
+        let dataCompletion : (Result<ResultSimulatedResponse, AFError>)->Void = {
+            result in
+            
+            switch result {
+            case .success(let data):
+                print(data)
+                self.loadDataSimulator?.loadResult(resultSimulator: data)
+            case .failure(let error):
+               print(error)
+            }
+        }
+        simulatorUseCase?.execute(dataForCalculate: dataCalculate, completion:dataCompletion)
+    }
   
     
 }
