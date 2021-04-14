@@ -62,17 +62,30 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
         self.navigationItem.title = Constants.TITLE_SCREEN_APP
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.hidesBackButton = true
+        
         documentNumberTextField.delegate = self
-        typeCardsDropDown.delegate = self
+        amountTextField.delegate = self
+ 
+        setupDropdown(genericDropDown: typeCardsDropDown)
+        setupDropdown(genericDropDown: quoteToFinanceDropDown)
+        setupDropdown(genericDropDown: numberTeaDropDown)
+        setupDropdown(genericDropDown: paymentDayDropDown)
+        
         homeViewModel = HomeViewModel (loadDataSimulator: self)
         homeViewModel?.getDataForLoadSimulator()
     }
     
+    private func setupDropdown(genericDropDown: DropDown) {
+        genericDropDown.delegate = self
+        genericDropDown.selectedRowColor = .lightGray
+        genericDropDown.arrowColor = .black
+        genericDropDown.borderColor = .blue
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
-                           replacementString string: String) -> Bool
-    {
+                           replacementString string: String) -> Bool {
         
-        let currentString: NSString = documentNumberTextField.text! as NSString
+        let currentString: NSString = textField.text! as NSString
         let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= maxCharacterDocumentNumber
     }
@@ -84,8 +97,7 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
         let currentTea = numberTeaDropDown.text
         let numbreQuote = quoteToFinanceDropDown.text
         let numberDay = paymentDayDropDown.text
-        let dataSimulation = DataSimulatedRequest(dni:documentNumber, tarjeta:descriptionCard, monto:amountForSimulate,
-                                                  cuotas:numbreQuote, tea:currentTea, dia_pago:numberDay )
+        let dataSimulation = DataSimulatedRequest(dni:documentNumber, tarjeta:descriptionCard,                                                          monto:amountForSimulate,cuotas:numbreQuote, tea:currentTea,                                           dia_pago:numberDay )
         homeViewModel?.calculatePayment(dataCalculate: dataSimulation)
     }
 

@@ -47,7 +47,7 @@
                                                     <action selector="dropdownBeginEdit:" destination="qpe-LT-MiL" eventType="editingDidBegin" id="m5v-VK-Dox"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Monto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Bu-FD-AcN">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Monto" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1Bu-FD-AcN">
                                                 <rect key="frame" x="24" y="259.5" width="380" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
