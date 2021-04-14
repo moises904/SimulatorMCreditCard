@@ -262,6 +262,8 @@
 		B50686902620106A0008ECC9 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				B5A5C5EC262155C900590A51 /* Response */,
+				B5A5C5EB2621550F00590A51 /* Request */,
 				B5A5C5E426214D9800590A51 /* Services */,
 				B506868926200EB20008ECC9 /* Config */,
 				B5068691262010710008ECC9 /* Base */,
@@ -430,8 +432,6 @@
 		B5A5C5E426214D9800590A51 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B5A5C5EB2621550F00590A51 /* Request */,
-				B5A5C5EC262155C900590A51 /* Response */,
 				B5A5C5E526214DB700590A51 /* SimulatorService.swift */,
 			);
 			path = Services;

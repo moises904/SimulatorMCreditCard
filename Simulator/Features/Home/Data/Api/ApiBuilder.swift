@@ -24,7 +24,7 @@ class ApiBuilder {
         return AF.request(Configuration.basePathSimulator , method:.get, headers: headers)
     }
     
-    static func generateRequesst(request: DataSimulatedRequest)->DataRequest? {
+    static func generateRequest(request: DataSimulatedRequest)->DataRequest? {
 
         
         let headers: HTTPHeaders? = [Configuration.AUTORIZATHION: Configuration.PASSWORD,

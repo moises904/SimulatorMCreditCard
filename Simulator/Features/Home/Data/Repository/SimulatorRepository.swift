@@ -27,7 +27,7 @@ class SimulatorRepository : ISimulatorRepository {
     func getSimulatePayment(dataForCalculate: DataSimulatedRequest,
                             completion: @escaping(Result<ResultSimulatedResponse, AFError>)->Void) {
         print("calculate simulate")
-        ApiBuilder.generateRequesst(request: dataForCalculate)?.responseDecodable {
+        ApiBuilder.generateRequest(request: dataForCalculate)?.responseDecodable {
             (response: AFDataResponse<ResultSimulatedResponse>) in
             debugPrint(response)
             completion(response.result)
