@@ -17,9 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-45-vq5">
-                                <rect key="frame" x="114" y="567" width="200" height="30"/>
+                                <rect key="frame" x="167" y="452.5" width="80" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="ESL-rs-l5I"/>
+                                    <constraint firstAttribute="height" constant="40" id="fVu-Q3-cDv"/>
+                                    <constraint firstAttribute="width" constant="80" id="mSg-Rf-iOY"/>
                                 </constraints>
                                 <state key="normal" title="Volver"/>
                                 <connections>
@@ -27,28 +28,67 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu cuota mensual estimada es" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofO-sl-G1Q">
-                                <rect key="frame" x="97" y="164" width="234" height="20"/>
+                                <rect key="frame" x="90" y="104" width="234" height="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-Sl-Viv">
+                                <rect key="frame" x="80" y="164" width="254" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha primera cuota : 12/12/2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1y-fy-xxt">
+                                <rect key="frame" x="79" y="236" width="256" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxB-RK-jec">
+                                <rect key="frame" x="70" y="295.5" width="274" height="117"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Cuota Mensual: El valor de la cuota corresponde solo al monto de la compra, no incluye otros gastos y comisiones.                                                 Para la simulación de tu compra se ha considerado el envío electrónico del estado de cuenta, el cual no tiene costo.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="2" paragraphSpacingBefore="2" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="krf-GF-hP1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eiY-45-vq5" firstAttribute="leading" secondItem="krf-GF-hP1" secondAttribute="leading" constant="114" id="2J0-BF-HZa"/>
-                            <constraint firstItem="ofO-sl-G1Q" firstAttribute="top" secondItem="krf-GF-hP1" secondAttribute="top" constant="120" id="2M7-ft-6WO"/>
-                            <constraint firstItem="eiY-45-vq5" firstAttribute="centerX" secondItem="SBV-eJ-xeq" secondAttribute="centerX" id="DgM-ld-2eq"/>
-                            <constraint firstItem="krf-GF-hP1" firstAttribute="bottom" secondItem="eiY-45-vq5" secondAttribute="bottom" constant="265" id="NUn-0M-JTl"/>
-                            <constraint firstItem="eiY-45-vq5" firstAttribute="centerX" secondItem="ofO-sl-G1Q" secondAttribute="centerX" id="QdP-Oo-g9S"/>
+                            <constraint firstItem="ofO-sl-G1Q" firstAttribute="top" secondItem="krf-GF-hP1" secondAttribute="top" constant="60" id="2M7-ft-6WO"/>
+                            <constraint firstItem="TxB-RK-jec" firstAttribute="centerX" secondItem="SBV-eJ-xeq" secondAttribute="centerX" id="2xf-RK-VCz"/>
+                            <constraint firstItem="eiY-45-vq5" firstAttribute="centerX" secondItem="SBV-eJ-xeq" secondAttribute="centerX" id="9jJ-2W-SdV"/>
+                            <constraint firstItem="zOo-Sl-Viv" firstAttribute="top" secondItem="ofO-sl-G1Q" secondAttribute="bottom" constant="40" id="CkP-Ik-l7b"/>
+                            <constraint firstItem="g1y-fy-xxt" firstAttribute="centerX" secondItem="SBV-eJ-xeq" secondAttribute="centerX" id="JwF-l6-00O"/>
+                            <constraint firstItem="TxB-RK-jec" firstAttribute="top" secondItem="g1y-fy-xxt" secondAttribute="bottom" constant="40" id="PO0-NC-r4J"/>
+                            <constraint firstItem="TxB-RK-jec" firstAttribute="leading" secondItem="SBV-eJ-xeq" secondAttribute="leading" constant="70" id="PTu-sx-TpG"/>
                             <constraint firstItem="ofO-sl-G1Q" firstAttribute="centerX" secondItem="SBV-eJ-xeq" secondAttribute="centerX" id="RGh-y4-TOm"/>
+                            <constraint firstAttribute="trailing" secondItem="TxB-RK-jec" secondAttribute="trailing" constant="70" id="YtE-Nc-kFu"/>
+                            <constraint firstItem="g1y-fy-xxt" firstAttribute="top" secondItem="zOo-Sl-Viv" secondAttribute="bottom" constant="43" id="fln-SR-7nP"/>
+                            <constraint firstItem="zOo-Sl-Viv" firstAttribute="leading" secondItem="krf-GF-hP1" secondAttribute="leading" constant="80" id="i80-td-Qoa"/>
+                            <constraint firstItem="g1y-fy-xxt" firstAttribute="centerX" secondItem="SBV-eJ-xeq" secondAttribute="centerX" id="pom-1E-nSv"/>
+                            <constraint firstItem="krf-GF-hP1" firstAttribute="trailing" secondItem="zOo-Sl-Viv" secondAttribute="trailing" constant="80" id="qgt-Fs-LPT"/>
+                            <constraint firstItem="eiY-45-vq5" firstAttribute="top" secondItem="TxB-RK-jec" secondAttribute="bottom" constant="40" id="vZZ-iM-lti"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5iH-q1-EEV"/>
+                    <connections>
+                        <outlet property="amountResultLabel" destination="zOo-Sl-Viv" id="cBZ-ak-eFX"/>
+                        <outlet property="firstDatePaymentLabel" destination="g1y-fy-xxt" id="RlS-yc-nmY"/>
+                        <outlet property="titleResultLabel" destination="ofO-sl-G1Q" id="0Q3-7A-Vny"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVK-TV-PA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4256" y="-460"/>
+            <point key="canvasLocation" x="4255.072463768116" y="-460.04464285714283"/>
         </scene>
     </scenes>
 </document>
