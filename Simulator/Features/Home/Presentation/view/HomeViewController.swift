@@ -72,7 +72,7 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Alertable
         
         documentNumberTextField.delegate = self
         amountTextField.delegate = self
- 
+        calculateButton.layer.cornerRadius = 10
         setupDropdown(genericDropDown: typeCardsDropDown)
         setupDropdown(genericDropDown: quoteToFinanceDropDown)
         setupDropdown(genericDropDown: numberTeaDropDown)
