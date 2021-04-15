@@ -16,15 +16,22 @@ protocol LoadDataSimulator {
     func showError(messageError: String)
 }
 
+protocol LoadProgress {
+    func showActivityIndicator()
+    func hideActivityIndicator()
+}
+
 final  class HomeViewModel {
         
     private var loadDataSimulator: LoadDataSimulator?
     private let simulatorUseCase: SimulatorUseCase?
     private let validationUseCase: ValidationUseCase?
+    private var loadProgress: LoadProgress?
     
-    init(loadDataSimulator: LoadDataSimulator) {
+    init(loadDataSimulator: LoadDataSimulator, loadProgress: LoadProgress ) {
         
         self.loadDataSimulator = loadDataSimulator
+        self.loadProgress = loadProgress
         self.simulatorUseCase  = SimulatorUseCase()
         self.validationUseCase = ValidationUseCase()
         
@@ -32,9 +39,12 @@ final  class HomeViewModel {
     
     @objc func getDataForLoadSimulator() {
         
+        loadProgress?.showActivityIndicator()
         
         let dataCompletation : (Result<ParametersSimulatorResponse,AFError>)->Void =  {
             result in
+            self.loadProgress?.hideActivityIndicator()
+
             switch result {
                 case .success( let data):
                     print("viewModel success")
@@ -43,7 +53,6 @@ final  class HomeViewModel {
                     break
                 case .failure( let error):
                     print("viewModel error")
-                    self.loadDataSimulator?.loadError(aferror: error)
                     print(error)
                     break
                 }
@@ -56,15 +65,19 @@ final  class HomeViewModel {
 
     func calculatePayment(dataCalculate: DataSimulatedRequest) {
         
+        loadProgress?.showActivityIndicator()
+        
         let dataCompletion : (Result<ResultSimulatedResponse, AFError>)->Void = {
             result in
-            
+            self.loadProgress?.hideActivityIndicator()
             switch result {
             case .success(let data):
                 print(data)
                 self.loadDataSimulator?.loadResult(resultSimulator: data)
+            break
             case .failure(let error):
                print(error)
+            break
             }
         }
         simulatorUseCase?.execute(dataForCalculate: dataCalculate, completion:dataCompletion)

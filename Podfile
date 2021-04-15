@@ -7,10 +7,8 @@ target 'Simulator' do
   pod 'iOSDropDown'
   pod 'IQKeyboardManagerSwift'
   pod 'Alamofire'
-  pod 'Swinject'
-  pod 'SwinjectAutoregistration'	
   pod 'RxSwift'
-	
+  pod 'NVActivityIndicatorView'	
   # Pods for Simulator
 
   target 'SimulatorTests' do

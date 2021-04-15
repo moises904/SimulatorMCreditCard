@@ -8,26 +8,14 @@
 import UIKit
 import iOSDropDown
 import Alamofire
-final class HomeViewController: UIViewController, UITextFieldDelegate, Alertable,
-                                StoryboardInstantiable, LoadDataSimulator {
-   
-    func showError(messageError: String) {
-        showAlert(title:"Error", message: messageError)
-    }
-    
-    func loadResult(resultSimulator: ResultSimulatedResponse) {
-        goToResultSimulate(resultSimulator: resultSimulator)
+import NVActivityIndicatorView
 
-    }
+final class HomeViewController: UIViewController, UITextFieldDelegate, Alertable,
+                                StoryboardInstantiable, LoadDataSimulator, LoadProgress {
+
     
-    
-    func loadData(data: ParametersSimulatorResponse) {
-        loadCardData(dataSimulator: data)
-    }
-    
-    func loadError(aferror: AFError) {
-        //<#code#>
-    }
+   
+    var activityIndicatorView: NVActivityIndicatorView!
 
     
     @IBOutlet weak var documentNumberTextField: UITextField!
@@ -70,16 +58,38 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Alertable
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.hidesBackButton = true
         
+        initialzeProgress()
+
         documentNumberTextField.delegate = self
         amountTextField.delegate = self
         calculateButton.layer.cornerRadius = 10
+        
         setupDropdown(genericDropDown: typeCardsDropDown)
         setupDropdown(genericDropDown: quoteToFinanceDropDown)
         setupDropdown(genericDropDown: numberTeaDropDown)
         setupDropdown(genericDropDown: paymentDayDropDown)
         
-        homeViewModel = HomeViewModel (loadDataSimulator: self)
+        homeViewModel = HomeViewModel (loadDataSimulator: self, loadProgress: self)
         homeViewModel?.getDataForLoadSimulator()
+        
+    }
+    
+    private func initialzeProgress() {
+        
+        let positionX = UIScreen.main.bounds.size.width*0.5
+        let positionY = UIScreen.main.bounds.size.height*0.5
+        let loaderWidth = self.view.frame.width/3
+        let loaderHeigth = self.view.frame.height/3
+        let frameProgress = CGRect(x: positionX - loaderWidth/2,
+                                   y: positionY - loaderHeigth/2,
+                                   width: loaderWidth ,
+                                   height: loaderHeigth)
+    
+        
+        activityIndicatorView = NVActivityIndicatorView(frame:  frameProgress ,
+                                                          type: NVActivityIndicatorType.ballScaleRippleMultiple)
+        activityIndicatorView.padding = 0
+        activityIndicatorView.color = .red
     }
     
     private func setupDropdown(genericDropDown: DropDown) {
@@ -149,5 +159,35 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Alertable
         numberTeaDropDown.selectedIndex = currentIndex
         numberTeaDropDown.text = numberTeaDropDown.optionArray[currentIndex]
 
+    }
+    
+    func showActivityIndicator() {
+        
+        self.view.addSubview(activityIndicatorView)
+        activityIndicatorView?.startAnimating()
+        
+    }
+    
+    func hideActivityIndicator() {
+        activityIndicatorView?.stopAnimating()
+        self.view.willRemoveSubview(activityIndicatorView)
+    }
+    
+    func showError(messageError: String) {
+        showAlert(title:"Error", message: messageError)
+    }
+    
+    func loadResult(resultSimulator: ResultSimulatedResponse) {
+        goToResultSimulate(resultSimulator: resultSimulator)
+
+    }
+    
+    
+    func loadData(data: ParametersSimulatorResponse) {
+        loadCardData(dataSimulator: data)
+    }
+    
+    func loadError(aferror: AFError) {
+        //<#code#>
     }
 }

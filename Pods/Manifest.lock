@@ -2,36 +2,33 @@ PODS:
   - Alamofire (5.4.2)
   - iOSDropDown (0.3.4)
   - IQKeyboardManagerSwift (6.5.6)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - RxSwift (6.1.0)
-  - Swinject (2.7.1)
-  - SwinjectAutoregistration (2.7.0):
-    - Swinject (~> 2.7)
 
 DEPENDENCIES:
   - Alamofire
   - iOSDropDown
   - IQKeyboardManagerSwift
+  - NVActivityIndicatorView
   - RxSwift
-  - Swinject
-  - SwinjectAutoregistration
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - iOSDropDown
     - IQKeyboardManagerSwift
+    - NVActivityIndicatorView
     - RxSwift
-    - Swinject
-    - SwinjectAutoregistration
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
-  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
-  SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: d70844ec076f99d8071d9096d332f87dbdb2a8e9
+PODFILE CHECKSUM: 3d2c352589f67a81a5259bbe597bf6ed866efbf8
 
 COCOAPODS: 1.10.1
