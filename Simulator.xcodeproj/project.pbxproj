@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E3A611E3F5939513CD20730 /* Pods_SimulatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DDCF99DAD60DA72A65958 /* Pods_SimulatorTests.framework */; };
 		6FF762D03711DB99FE4158F7 /* Pods_Simulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC3487154996EDBC5753121 /* Pods_Simulator.framework */; };
+		B5023F5F2627A545007EBBD3 /* ValidationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5023F5E2627A545007EBBD3 /* ValidationUseCase.swift */; };
+		B5023F632627AA0B007EBBD3 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5023F622627AA0B007EBBD3 /* Alertable.swift */; };
 		B502BF41261D0436003E1DC0 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B504FB42261065670020F07C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB41261065670020F07C /* AppDelegate.swift */; };
 		B504FB44261065670020F07C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB43261065670020F07C /* SceneDelegate.swift */; };
@@ -84,6 +86,8 @@
 		6BC3487154996EDBC5753121 /* Pods_Simulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		832A14C88E21814C4FD64AC4 /* Pods-Simulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simulator.debug.xcconfig"; path = "Target Support Files/Pods-Simulator/Pods-Simulator.debug.xcconfig"; sourceTree = "<group>"; };
 		96B02F15EBDB2120FD5F1721 /* Pods-SimulatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorTests.debug.xcconfig"; path = "Target Support Files/Pods-SimulatorTests/Pods-SimulatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5023F5E2627A545007EBBD3 /* ValidationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUseCase.swift; sourceTree = "<group>"; };
+		B5023F622627AA0B007EBBD3 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		B504FB3E261065670020F07C /* Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B504FB41261065670020F07C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B504FB43261065670020F07C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				B5C7EE4D262281A900527029 /* SimulatorUseCase.swift */,
+				B5023F5E2627A545007EBBD3 /* ValidationUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -460,6 +465,7 @@
 			children = (
 				B5BFA6152622B30100D2E638 /* StoryboardInstantiable.swift */,
 				B57057832627572000012FA4 /* Constants.swift */,
+				B5023F622627AA0B007EBBD3 /* Alertable.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -759,8 +765,10 @@
 				B5D7CDEB26256E4B007A7DE7 /* DataSimulatorModel.swift in Sources */,
 				B57057842627572000012FA4 /* Constants.swift in Sources */,
 				B5BFA61B2622B52B00D2E638 /* AppDIContainer.swift in Sources */,
+				B5023F5F2627A545007EBBD3 /* ValidationUseCase.swift in Sources */,
 				B524B48F261F96DD00B8DB01 /* ResultViewController.swift in Sources */,
 				B5068693262010C30008ECC9 /* BaseApiError.swift in Sources */,
+				B5023F632627AA0B007EBBD3 /* Alertable.swift in Sources */,
 				B57057522626479C00012FA4 /* BaseRequest.swift in Sources */,
 				B5D7CE182625D7FC007A7DE7 /* ApiBuilder.swift in Sources */,
 				B506868B26200EEF0008ECC9 /* Configuration.swift in Sources */,

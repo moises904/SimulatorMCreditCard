@@ -8,7 +8,13 @@
 import UIKit
 import iOSDropDown
 import Alamofire
-final class HomeViewController: UIViewController, UITextFieldDelegate, StoryboardInstantiable, LoadDataSimulator {
+final class HomeViewController: UIViewController, UITextFieldDelegate, Alertable,
+                                StoryboardInstantiable, LoadDataSimulator {
+   
+    func showError(messageError: String) {
+        showAlert(title:"Error", message: messageError)
+    }
+    
     func loadResult(resultSimulator: ResultSimulatedResponse) {
         goToResultSimulate(resultSimulator: resultSimulator)
 
@@ -40,6 +46,7 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     private var homeViewModel : HomeViewModel?
     
     @IBAction func clickCalculate(_ sender: UIButton) {
+    
         calculateSimulation()
     }
     
@@ -91,14 +98,24 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     }
     
     func calculateSimulation() {
+        
+       
+        
         let documentNumber = documentNumberTextField.text
         let descriptionCard = typeCardsDropDown.text
         let amountForSimulate = amountTextField.text
         let currentTea = numberTeaDropDown.text
         let numbreQuote = quoteToFinanceDropDown.text
         let numberDay = paymentDayDropDown.text
-        let dataSimulation = DataSimulatedRequest(dni:documentNumber, tarjeta:descriptionCard,                                                          monto:amountForSimulate,cuotas:numbreQuote, tea:currentTea,                                           dia_pago:numberDay )
+        
+        let validate = homeViewModel?.validateFieldsForSimulator(document: documentNumber!,
+                                                                amountForSimulate: amountForSimulate)
+        if (validate!) {
+            
+        let dataSimulation = DataSimulatedRequest(dni:documentNumber, tarjeta:descriptionCard,                                                          monto:amountForSimulate,cuotas:numbreQuote, tea:currentTea,                                                     dia_pago:numberDay )
         homeViewModel?.calculatePayment(dataCalculate: dataSimulation)
+            
+        }
     }
 
     func goToResultSimulate(resultSimulator: ResultSimulatedResponse) {
@@ -113,8 +130,8 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Storyboar
     private func loadCardData(dataSimulator: ParametersSimulatorResponse) {
         
         let currentIndex:Int = 0
-        documentNumberTextField.text="23234212"
-        amountTextField.text="1000"
+        //documentNumberTextField.text="23234212"
+        //amountTextField.text="1000"
         let creditCars = dataSimulator.responseData.tarjetas
         typeCardsDropDown.optionArray = [creditCars.nameClasica, creditCars.nameBlack, creditCars.nameGold]
         typeCardsDropDown.selectedIndex = currentIndex+1

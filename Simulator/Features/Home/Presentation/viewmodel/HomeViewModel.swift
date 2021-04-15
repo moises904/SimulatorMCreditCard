@@ -13,18 +13,20 @@ protocol LoadDataSimulator {
     func loadData(data:ParametersSimulatorResponse)
     func loadError(aferror: AFError)
     func loadResult(resultSimulator: ResultSimulatedResponse)
-    
+    func showError(messageError: String)
 }
 
 final  class HomeViewModel {
         
     private var loadDataSimulator: LoadDataSimulator?
     private let simulatorUseCase: SimulatorUseCase?
+    private let validationUseCase: ValidationUseCase?
     
     init(loadDataSimulator: LoadDataSimulator) {
         
-        self.simulatorUseCase  = SimulatorUseCase()
         self.loadDataSimulator = loadDataSimulator
+        self.simulatorUseCase  = SimulatorUseCase()
+        self.validationUseCase = ValidationUseCase()
         
     }
     
@@ -68,5 +70,16 @@ final  class HomeViewModel {
         simulatorUseCase?.execute(dataForCalculate: dataCalculate, completion:dataCompletion)
     }
   
+    func validateFieldsForSimulator(document:String?, amountForSimulate: String?)->Bool {
+        
+        let resultValidation: String = self.validationUseCase!.validateParametersSimulator(numberDni: document,                                                                                          amount: amountForSimulate)
+        
+        if (resultValidation.isEmpty) {
+            return true
+        } else {
+            loadDataSimulator?.showError(messageError: resultValidation)
+            return false
+        }
+    }
     
 }
