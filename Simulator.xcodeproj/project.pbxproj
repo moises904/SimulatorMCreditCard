@@ -10,7 +10,8 @@
 		B07412ACCAE91A55E9E70E76 /* Pods_Simulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C264DE39341D451E092C68 /* Pods_Simulator.framework */; };
 		B5023F5F2627A545007EBBD3 /* ValidationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5023F5E2627A545007EBBD3 /* ValidationUseCase.swift */; };
 		B5023F632627AA0B007EBBD3 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5023F622627AA0B007EBBD3 /* Alertable.swift */; };
-		B502BF41261D0436003E1DC0 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B5023FB02627E77A007EBBD3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5023FAF2627E77A007EBBD3 /* ErrorResponse.swift */; };
+		B502BF41261D0436003E1DC0 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B504FB42261065670020F07C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB41261065670020F07C /* AppDelegate.swift */; };
 		B504FB44261065670020F07C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB43261065670020F07C /* SceneDelegate.swift */; };
 		B504FB46261065670020F07C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504FB45261065670020F07C /* SplashViewController.swift */; };
@@ -42,7 +43,7 @@
 		B5D7CE182625D7FC007A7DE7 /* ApiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7CE172625D7FC007A7DE7 /* ApiBuilder.swift */; };
 		B5E88B3B2626002E0074B8E1 /* DataSimulatedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E88B3A2626002E0074B8E1 /* DataSimulatedRequest.swift */; };
 		B5E88B41262603C10074B8E1 /* ResultSimulatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E88B40262603C10074B8E1 /* ResultSimulatedResponse.swift */; };
-		B5FC662F26183873007AB4C6 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B5FC662E26183873007AB4C6 /* SwiftPackageProductDependency */; settings = {ATTRIBUTES = (Required, ); }; };
+		B5FC662F26183873007AB4C6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B5FC662E26183873007AB4C6 /* Lottie */; settings = {ATTRIBUTES = (Required, ); }; };
 		B5FC6693261986E8007AB4C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC6692261986E8007AB4C6 /* HomeViewController.swift */; };
 		B6EC2BA63A090FF4EA32DF3A /* Pods_Simulator_SimulatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF3CBEB94B87D11F36F51D5 /* Pods_Simulator_SimulatorUITests.framework */; };
 		D31DD16272357CA70101A9BB /* Pods_SimulatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F04F194FC810FCB8714A334 /* Pods_SimulatorTests.framework */; };
@@ -72,7 +73,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B502BF41261D0436003E1DC0 /* BuildFile in Embed Frameworks */,
+				B502BF41261D0436003E1DC0 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +91,7 @@
 		8D29F285EDC97CE546C2FB39 /* Pods-Simulator-SimulatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simulator-SimulatorUITests.release.xcconfig"; path = "Target Support Files/Pods-Simulator-SimulatorUITests/Pods-Simulator-SimulatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B5023F5E2627A545007EBBD3 /* ValidationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUseCase.swift; sourceTree = "<group>"; };
 		B5023F622627AA0B007EBBD3 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		B5023FAF2627E77A007EBBD3 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		B504FB3E261065670020F07C /* Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B504FB41261065670020F07C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B504FB43261065670020F07C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5FC662F26183873007AB4C6 /* BuildFile in Frameworks */,
+				B5FC662F26183873007AB4C6 /* Lottie in Frameworks */,
 				B524B46A261D0E8E00B8DB01 /* iOSDropDown.framework in Frameworks */,
 				B524B47D261EB5AC00B8DB01 /* IQKeyboardManagerSwift.framework in Frameworks */,
 				B07412ACCAE91A55E9E70E76 /* Pods_Simulator.framework in Frameworks */,
@@ -456,6 +458,7 @@
 			children = (
 				B506869C262012480008ECC9 /* ParametersSimulatorResponse.swift */,
 				B5E88B40262603C10074B8E1 /* ResultSimulatedResponse.swift */,
+				B5023FAF2627E77A007EBBD3 /* ErrorResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -534,7 +537,7 @@
 			);
 			name = Simulator;
 			packageProductDependencies = (
-				B5FC662E26183873007AB4C6 /* SwiftPackageProductDependency */,
+				B5FC662E26183873007AB4C6 /* Lottie */,
 			);
 			productName = Simulator;
 			productReference = B504FB3E261065670020F07C /* Simulator.app */;
@@ -611,7 +614,7 @@
 			);
 			mainGroup = B504FB35261065670020F07C;
 			packageReferences = (
-				B5FC662D26183873007AB4C6 /* RemoteSwiftPackageReference */,
+				B5FC662D26183873007AB4C6 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = B504FB3F261065670020F07C /* Products */;
 			projectDirPath = "";
@@ -767,6 +770,7 @@
 				B5BFA61B2622B52B00D2E638 /* AppDIContainer.swift in Sources */,
 				B5023F5F2627A545007EBBD3 /* ValidationUseCase.swift in Sources */,
 				B524B48F261F96DD00B8DB01 /* ResultViewController.swift in Sources */,
+				B5023FB02627E77A007EBBD3 /* ErrorResponse.swift in Sources */,
 				B5068693262010C30008ECC9 /* BaseApiError.swift in Sources */,
 				B5023F632627AA0B007EBBD3 /* Alertable.swift in Sources */,
 				B57057522626479C00012FA4 /* BaseRequest.swift in Sources */,
@@ -1122,7 +1126,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B5FC662D26183873007AB4C6 /* RemoteSwiftPackageReference */ = {
+		B5FC662D26183873007AB4C6 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
@@ -1133,9 +1137,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B5FC662E26183873007AB4C6 /* SwiftPackageProductDependency */ = {
+		B5FC662E26183873007AB4C6 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B5FC662D26183873007AB4C6 /* RemoteSwiftPackageReference */;
+			package = B5FC662D26183873007AB4C6 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */

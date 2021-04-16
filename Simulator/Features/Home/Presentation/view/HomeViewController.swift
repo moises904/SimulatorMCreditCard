@@ -40,11 +40,6 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Alertable
     
     let maxCharacterDocumentNumber = 8
     
-    static func create(with viewModel: HomeViewModel) -> HomeViewController {
-        let view = HomeViewController.instantiateViewController()
-        view.homeViewModel = viewModel
-        return view
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +83,7 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Alertable
         
         activityIndicatorView = NVActivityIndicatorView(frame:  frameProgress ,
                                                           type: NVActivityIndicatorType.ballScaleRippleMultiple)
+    
         activityIndicatorView.padding = 0
         activityIndicatorView.color = .red
     }
@@ -112,7 +108,7 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Alertable
        
         
         let documentNumber = documentNumberTextField.text
-        let descriptionCard = typeCardsDropDown.text
+        let descriptionCard = typeCardsDropDown.text?.lowercased()
         let amountForSimulate = amountTextField.text
         let currentTea = numberTeaDropDown.text
         let numbreQuote = quoteToFinanceDropDown.text
@@ -140,8 +136,6 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, Alertable
     private func loadCardData(dataSimulator: ParametersSimulatorResponse) {
         
         let currentIndex:Int = 0
-        //documentNumberTextField.text="23234212"
-        //amountTextField.text="1000"
         let creditCars = dataSimulator.responseData.tarjetas
         typeCardsDropDown.optionArray = [creditCars.nameClasica, creditCars.nameBlack, creditCars.nameGold]
         typeCardsDropDown.selectedIndex = currentIndex+1

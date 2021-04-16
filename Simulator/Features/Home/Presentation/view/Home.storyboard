@@ -114,7 +114,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="handleKeyboard" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="dropdownBeginEdit:" destination="qpe-LT-MiL" eventType="editingDidEnd" id="qOd-Je-gza"/>
+                                                    <action selector="dropdownBeginEdit:" destination="qpe-LT-MiL" eventType="editingDidEnd" id="l5T-cr-bMo"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dia de pago" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-Br-il1" customClass="DropDown" customModule="iOSDropDown">

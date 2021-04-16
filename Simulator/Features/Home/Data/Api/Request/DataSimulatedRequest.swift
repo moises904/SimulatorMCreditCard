@@ -15,7 +15,7 @@ struct DataSimulatedRequest : BaseRequest, Codable{
     let cuotas: String?
     let tea: String?
     let dia_pago: String?
-    /*
+    
     init(dni: String?, tarjeta: String?, monto: String?, cuotas:String?, tea: String?, dia_pago: String?) {
         self.dni = dni
         self.tarjeta = tarjeta
@@ -24,6 +24,6 @@ struct DataSimulatedRequest : BaseRequest, Codable{
         self.tea = tea
         self.dia_pago = dia_pago
     }
-    */
+    
  
 }
