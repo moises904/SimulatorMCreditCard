@@ -34,7 +34,6 @@
 		B524B4C0261FFB8800B8DB01 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B524B4BF261FFB8800B8DB01 /* Result.storyboard */; };
 		B57057522626479C00012FA4 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57057512626479C00012FA4 /* BaseRequest.swift */; };
 		B57057842627572000012FA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57057832627572000012FA4 /* Constants.swift */; };
-		B5A5C5E626214DB700590A51 /* SimulatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C5E526214DB700590A51 /* SimulatorService.swift */; };
 		B5AB57CC26294568006FF287 /* ResultSimulatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB57CB26294568006FF287 /* ResultSimulatorModel.swift */; };
 		B5BFA6162622B30100D2E638 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA6152622B30100D2E638 /* StoryboardInstantiable.swift */; };
 		B5BFA61B2622B52B00D2E638 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA61A2622B52B00D2E638 /* AppDIContainer.swift */; };
@@ -124,7 +123,6 @@
 		B53387A42622806300A43535 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57057512626479C00012FA4 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		B57057832627572000012FA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B5A5C5E526214DB700590A51 /* SimulatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorService.swift; sourceTree = "<group>"; };
 		B5A5C5F826215AA200590A51 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AB57CB26294568006FF287 /* ResultSimulatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSimulatorModel.swift; sourceTree = "<group>"; };
 		B5BFA6152622B30100D2E638 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
@@ -272,7 +270,6 @@
 			children = (
 				B5A5C5EC262155C900590A51 /* Response */,
 				B5A5C5EB2621550F00590A51 /* Request */,
-				B5A5C5E426214D9800590A51 /* Services */,
 				B506868926200EB20008ECC9 /* Config */,
 				B5068691262010710008ECC9 /* Base */,
 				B5D7CE172625D7FC007A7DE7 /* ApiBuilder.swift */,
@@ -436,14 +433,6 @@
 			children = (
 			);
 			path = viewmodel;
-			sourceTree = "<group>";
-		};
-		B5A5C5E426214D9800590A51 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				B5A5C5E526214DB700590A51 /* SimulatorService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		B5A5C5EB2621550F00590A51 /* Request */ = {
@@ -785,7 +774,6 @@
 				B504FB46261065670020F07C /* SplashViewController.swift in Sources */,
 				B5BFA6162622B30100D2E638 /* StoryboardInstantiable.swift in Sources */,
 				B5E88B3B2626002E0074B8E1 /* DataSimulatedRequest.swift in Sources */,
-				B5A5C5E626214DB700590A51 /* SimulatorService.swift in Sources */,
 				B504FB42261065670020F07C /* AppDelegate.swift in Sources */,
 				B5C7EE542622856300527029 /* HomeViewModel.swift in Sources */,
 				B50686A1262014780008ECC9 /* ISimulatorRepository.swift in Sources */,
