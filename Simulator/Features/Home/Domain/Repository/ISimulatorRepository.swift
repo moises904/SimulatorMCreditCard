@@ -11,7 +11,7 @@ import Alamofire
 protocol ISimulatorRepository {
     
     func getDataForSimulate(completion:@escaping (Result<ParametersSimulatorResponse, AFError>)->Void)
-    func getSimulatePayment(dataForCalculate: DataSimulatedRequest,
+    func getSimulatePayment(dataForCalculate: DataSimulatedRequest?,
                             completion: @escaping(Result<ResultSimulatedResponse, AFError>)->Void)
     
 }

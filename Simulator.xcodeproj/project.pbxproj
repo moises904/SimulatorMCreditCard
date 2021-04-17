@@ -35,6 +35,7 @@
 		B57057522626479C00012FA4 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57057512626479C00012FA4 /* BaseRequest.swift */; };
 		B57057842627572000012FA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57057832627572000012FA4 /* Constants.swift */; };
 		B5A5C5E626214DB700590A51 /* SimulatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C5E526214DB700590A51 /* SimulatorService.swift */; };
+		B5AB57CC26294568006FF287 /* ResultSimulatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB57CB26294568006FF287 /* ResultSimulatorModel.swift */; };
 		B5BFA6162622B30100D2E638 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA6152622B30100D2E638 /* StoryboardInstantiable.swift */; };
 		B5BFA61B2622B52B00D2E638 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA61A2622B52B00D2E638 /* AppDIContainer.swift */; };
 		B5C7EE4E262281A900527029 /* SimulatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7EE4D262281A900527029 /* SimulatorUseCase.swift */; };
@@ -125,6 +126,7 @@
 		B57057832627572000012FA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B5A5C5E526214DB700590A51 /* SimulatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorService.swift; sourceTree = "<group>"; };
 		B5A5C5F826215AA200590A51 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AB57CB26294568006FF287 /* ResultSimulatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSimulatorModel.swift; sourceTree = "<group>"; };
 		B5BFA6152622B30100D2E638 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		B5BFA61A2622B52B00D2E638 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		B5C7EE4D262281A900527029 /* SimulatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorUseCase.swift; sourceTree = "<group>"; };
@@ -513,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				B5D7CDEA26256E4B007A7DE7 /* DataSimulatorModel.swift */,
+				B5AB57CB26294568006FF287 /* ResultSimulatorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -788,6 +791,7 @@
 				B50686A1262014780008ECC9 /* ISimulatorRepository.swift in Sources */,
 				B5068699262012340008ECC9 /* ApiRequestBase.swift in Sources */,
 				B504FB44261065670020F07C /* SceneDelegate.swift in Sources */,
+				B5AB57CC26294568006FF287 /* ResultSimulatorModel.swift in Sources */,
 				B5E88B41262603C10074B8E1 /* ResultSimulatedResponse.swift in Sources */,
 				B5FC6693261986E8007AB4C6 /* HomeViewController.swift in Sources */,
 			);
